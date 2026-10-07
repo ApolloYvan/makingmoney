@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1470" height="1050" viewBox="0 0 1470 1050" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC','WenQuanYi Zen Hei',sans-serif">
+<defs>
+<marker id="arrE" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker>
+<marker id="arrS" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#475569"/></marker>
+</defs>
+<rect width="1470" height="1050" fill="#FFFFFF"/>
+<text x="30" y="38" text-anchor="start" font-size="20" font-weight="700" fill="#111827">机会雷达 · 整体技术架构</text>
+<text x="30" y="58" text-anchor="start" font-size="12" font-weight="400" fill="#6B7280">运行平面跑数据，开发平面跑代码；LLM 只做抽取，打分、合并、过滤全部由确定性代码完成</text>
+<rect x="860" y="28" width="16" height="12" rx="3" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="882" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">确定性代码</text>
+<rect x="1000" y="28" width="16" height="12" rx="3" fill="#FFF7E8" stroke="#C98A1B" stroke-width="1.5"/>
+<text x="1022" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">LLM 参与（需校验）</text>
+<rect x="1140" y="28" width="16" height="12" rx="3" fill="#FEF2F1" stroke="#B42318" stroke-width="1.5"/>
+<text x="1162" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">硬闸门</text>
+<rect x="1280" y="28" width="16" height="12" rx="3" fill="#FFFFFF" stroke="#3F8F4E" stroke-width="1.5"/>
+<text x="1302" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">开发平面</text>
+<path d="M860,54 L890,54" fill="none" stroke="#475569" stroke-width="1.5"/>
+<text x="896" y="58" text-anchor="start" font-size="12" font-weight="400" fill="#374151">数据流</text>
+<path d="M960,54 L990,54" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="996" y="58" text-anchor="start" font-size="12" font-weight="400" fill="#374151">调度 / 控制 / 审批</text>
+<rect x="30" y="76" width="200" height="630" rx="10" fill="#F6F7F9" stroke="#6B7280" stroke-width="1.2"/>
+<text x="42" y="96" font-size="13" font-weight="700" fill="#6B7280">外部信号源</text>
+<rect x="260" y="76" width="920" height="630" rx="10" fill="#F1F5FD" stroke="#3B5B92" stroke-width="1.2"/>
+<text x="272" y="96" font-size="13" font-weight="700" fill="#3B5B92">运行平面 · 国内云轻量服务器 2C4G 单机 · 全部状态落在一个 SQLite（WAL）文件</text>
+<rect x="280" y="112" width="200" height="574" rx="10" fill="#FFFFFF" stroke="#6E86B5" stroke-width="1.2"/>
+<text x="292" y="132" font-size="12" font-weight="700" fill="#6E86B5">① 采集层</text>
+<rect x="500" y="112" width="200" height="574" rx="10" fill="#FFFFFF" stroke="#6E86B5" stroke-width="1.2"/>
+<text x="512" y="132" font-size="12" font-weight="700" fill="#6E86B5">② 共享底座</text>
+<rect x="720" y="112" width="220" height="574" rx="10" fill="#FFFFFF" stroke="#6E86B5" stroke-width="1.2"/>
+<text x="732" y="132" font-size="12" font-weight="700" fill="#6E86B5">③ 打分层 · 纯代码，禁止调用 LLM</text>
+<rect x="960" y="112" width="200" height="574" rx="10" fill="#FFFFFF" stroke="#6E86B5" stroke-width="1.2"/>
+<text x="972" y="132" font-size="12" font-weight="700" fill="#6E86B5">④ 输出与回写</text>
+<rect x="1210" y="76" width="220" height="630" rx="10" fill="#F6F7F9" stroke="#6B7280" stroke-width="1.2"/>
+<text x="1222" y="96" font-size="13" font-weight="700" fill="#6B7280">外部服务与你</text>
+<rect x="45" y="130" width="170" height="80" rx="7" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
+<text x="130.0" y="158.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">技术扩散链</text>
+<text x="130.0" y="174.0" text-anchor="middle" font-size="12" fill="#4B5563">GitHub · 魔搭</text>
+<text x="130.0" y="190.0" text-anchor="middle" font-size="12" fill="#4B5563">npm · PyPI · 社区 RSS</text>
+<rect x="45" y="240" width="170" height="80" rx="7" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
+<text x="130.0" y="268.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">经营压力链</text>
+<text x="130.0" y="284.0" text-anchor="middle" font-size="12" fill="#4B5563">统计局 · 中小企业指数</text>
+<text x="130.0" y="300.0" text-anchor="middle" font-size="12" fill="#4B5563">互动易 · 法院案例</text>
+<rect x="45" y="350" width="170" height="80" rx="7" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
+<text x="130.0" y="378.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">政策链</text>
+<text x="130.0" y="394.0" text-anchor="middle" font-size="12" fill="#4B5563">国务院 · 部委 · 省市</text>
+<text x="130.0" y="410.0" text-anchor="middle" font-size="12" fill="#4B5563">申报通知 · 处罚公示</text>
+<rect x="45" y="480" width="170" height="64" rx="7" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
+<text x="130.0" y="508.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">人工输入</text>
+<text x="130.0" y="524.0" text-anchor="middle" font-size="12" fill="#4B5563">访谈语音 · 人工采样</text>
+<rect x="295" y="140" width="170" height="64" rx="7" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="380.0" y="168.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">调度 systemd timer</text>
+<text x="380.0" y="184.0" text-anchor="middle" font-size="12" fill="#4B5563">每个任务一条命令 · 幂等</text>
+<rect x="295" y="240" width="170" height="64" rx="7" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="380.0" y="268.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">采集器插件</text>
+<text x="380.0" y="284.0" text-anchor="middle" font-size="12" fill="#4B5563">只能采 registry.yaml 登记源</text>
+<rect x="295" y="350" width="170" height="84" rx="7" fill="#FEF2F1" stroke="#B42318" stroke-width="1.5"/>
+<text x="380.0" y="380.0" text-anchor="middle" font-size="14" font-weight="700" fill="#7A1610">共享 HTTP 客户端</text>
+<text x="380.0" y="396.0" text-anchor="middle" font-size="12" fill="#8A2C24">注册表白名单 · robots</text>
+<text x="380.0" y="412.0" text-anchor="middle" font-size="12" fill="#8A2C24">域名限速 · 缓存</text>
+<rect x="295" y="480" width="170" height="64" rx="7" fill="#FFF7E8" stroke="#C98A1B" stroke-width="1.5"/>
+<text x="380.0" y="508.0" text-anchor="middle" font-size="14" font-weight="700" fill="#5A3B00">飞书机器人入口</text>
+<text x="380.0" y="524.0" text-anchor="middle" font-size="12" fill="#7A5A1F">语音转写 · 结构化</text>
+<rect x="295" y="590" width="170" height="64" rx="7" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="380.0" y="618.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">健康监控</text>
+<text x="380.0" y="634.0" text-anchor="middle" font-size="12" fill="#4B5563">源最近成功时间 · 空字段率</text>
+<path d="M520,144 a82.5,8 0 0,0 165,0 a82.5,8 0 0,0 -165,0 v66 a82.5,8 0 0,0 165,0 v-66" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="602.5" y="179.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">原始信号仓</text>
+<text x="602.5" y="196.0" text-anchor="middle" font-size="12" fill="#4B5563">只追加 · 内容哈希去重</text>
+<rect x="520" y="250" width="165" height="64" rx="7" fill="#FFF7E8" stroke="#C98A1B" stroke-width="1.5"/>
+<text x="602.5" y="278.0" text-anchor="middle" font-size="14" font-weight="700" fill="#5A3B00">特征抽取</text>
+<text x="602.5" y="294.0" text-anchor="middle" font-size="12" fill="#7A5A1F">Pydantic Schema 校验</text>
+<rect x="520" y="345" width="165" height="64" rx="7" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="602.5" y="373.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">机会实体归并</text>
+<text x="602.5" y="389.0" text-anchor="middle" font-size="12" fill="#4B5563">向量相似度 + 代码阈值</text>
+<rect x="520" y="560" width="165" height="84" rx="7" fill="#FFF7E8" stroke="#C98A1B" stroke-width="1.5"/>
+<text x="602.5" y="590.0" text-anchor="middle" font-size="14" font-weight="700" fill="#5A3B00">LLM 网关</text>
+<text x="602.5" y="606.0" text-anchor="middle" font-size="12" fill="#7A5A1F">OpenAI 兼容 · 轻量/旗舰</text>
+<text x="602.5" y="622.0" text-anchor="middle" font-size="12" fill="#7A5A1F">按日 token 预算熔断</text>
+<rect x="745" y="140" width="170" height="84" rx="7" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="830.0" y="170.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">政策引擎</text>
+<text x="830.0" y="186.0" text-anchor="middle" font-size="12" fill="#4B5563">生命周期状态机</text>
+<text x="830.0" y="202.0" text-anchor="middle" font-size="12" fill="#4B5563">开窗→A · 其余→B</text>
+<rect x="737" y="262" width="186" height="182" rx="10" fill="#F7F9FE" stroke="#6E86B5" stroke-width="1.2"/>
+<text x="749" y="282" font-size="12" font-weight="700" fill="#6E86B5">双 Agent 打分</text>
+<rect x="750" y="292" width="160" height="62" rx="7" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="830.0" y="319.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">Agent A · 快钱分</text>
+<text x="830.0" y="335.0" text-anchor="middle" font-size="12" fill="#4B5563">窗口估计 · 准入断层改写</text>
+<rect x="750" y="368" width="160" height="62" rx="7" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="830.0" y="395.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">Agent B · 长钱分</text>
+<text x="830.0" y="411.0" text-anchor="middle" font-size="12" fill="#4B5563">含准入成本系数</text>
+<rect x="745" y="480" width="170" height="64" rx="7" fill="#FEF2F1" stroke="#B42318" stroke-width="1.5"/>
+<text x="830.0" y="508.0" text-anchor="middle" font-size="14" font-weight="700" fill="#7A1610">交汇评分 + 红线过滤</text>
+<text x="830.0" y="524.0" text-anchor="middle" font-size="12" fill="#8A2C24">scoring · redlines.yaml</text>
+<rect x="975" y="140" width="170" height="64" rx="7" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="1060.0" y="168.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">每日备份任务</text>
+<text x="1060.0" y="184.0" text-anchor="middle" font-size="12" fill="#4B5563">SQLite 快照上传</text>
+<rect x="975" y="300" width="170" height="84" rx="7" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="1060.0" y="330.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">验证回写</text>
+<text x="1060.0" y="346.0" text-anchor="middle" font-size="12" fill="#4B5563">访谈 / 定金测试结果</text>
+<text x="1060.0" y="362.0" text-anchor="middle" font-size="12" fill="#4B5563">按命中率校准渠道权重</text>
+<rect x="975" y="480" width="170" height="64" rx="7" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="1060.0" y="508.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">周报 · 月报 · 警报</text>
+<text x="1060.0" y="524.0" text-anchor="middle" font-size="12" fill="#4B5563">候选卡片 + 验证包</text>
+<path d="M1225,144 a95.0,8 0 0,0 190,0 a95.0,8 0 0,0 -190,0 v56 a95.0,8 0 0,0 190,0 v-56" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
+<text x="1320.0" y="174.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">对象存储</text>
+<text x="1320.0" y="191.0" text-anchor="middle" font-size="12" fill="#4B5563">每日快照</text>
+<rect x="1225" y="300" width="190" height="84" rx="7" fill="#1F2937" stroke="#1F2937" stroke-width="1.5"/>
+<text x="1320.0" y="330.0" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">你</text>
+<text x="1320.0" y="346.0" text-anchor="middle" font-size="12" fill="#D1D5DB">读周报 · 回写验证结果</text>
+<text x="1320.0" y="362.0" text-anchor="middle" font-size="12" fill="#D1D5DB">审契约 · 批准任务</text>
+<rect x="1225" y="480" width="190" height="64" rx="7" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
+<text x="1320.0" y="508.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">飞书 / 企业微信 / 邮件</text>
+<text x="1320.0" y="524.0" text-anchor="middle" font-size="12" fill="#4B5563">手机上看周报</text>
+<rect x="1225" y="568" width="190" height="64" rx="7" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
+<text x="1320.0" y="596.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">国内已备案模型</text>
+<text x="1320.0" y="612.0" text-anchor="middle" font-size="12" fill="#4B5563">官方 API，不走中转</text>
+<rect x="30" y="758" width="1400" height="270" rx="10" fill="#F3F9F3" stroke="#2F6F3B" stroke-width="1.2"/>
+<text x="42" y="778" font-size="13" font-weight="700" fill="#2F6F3B">开发平面 · GitHub + 开发 Agent（流水线自右向左）</text>
+<rect x="1245" y="812" width="170" height="84" rx="7" fill="#FFFFFF" stroke="#3F8F4E" stroke-width="1.5"/>
+<text x="1330.0" y="842.0" text-anchor="middle" font-size="14" font-weight="700" fill="#163D1E">规划会话</text>
+<text x="1330.0" y="858.0" text-anchor="middle" font-size="12" fill="#3F5B45">按策划案拆出</text>
+<text x="1330.0" y="874.0" text-anchor="middle" font-size="12" fill="#3F5B45">Issue 任务单</text>
+<rect x="1005" y="812" width="170" height="84" rx="7" fill="#FFFFFF" stroke="#3F8F4E" stroke-width="1.5"/>
+<text x="1090.0" y="842.0" text-anchor="middle" font-size="14" font-weight="700" fill="#163D1E">Issue 任务单</text>
+<text x="1090.0" y="858.0" text-anchor="middle" font-size="12" fill="#3F5B45">目标 · 输入输出</text>
+<text x="1090.0" y="874.0" text-anchor="middle" font-size="12" fill="#3F5B45">禁改文件 · 验收命令</text>
+<rect x="765" y="812" width="170" height="84" rx="7" fill="#FFFFFF" stroke="#3F8F4E" stroke-width="1.5"/>
+<text x="850.0" y="850.0" text-anchor="middle" font-size="14" font-weight="700" fill="#163D1E">Claude Code 云端会话</text>
+<text x="850.0" y="866.0" text-anchor="middle" font-size="12" fill="#3F5B45">一任务一会话一分支</text>
+<rect x="525" y="812" width="170" height="84" rx="7" fill="#FFFFFF" stroke="#3F8F4E" stroke-width="1.5"/>
+<text x="610.0" y="850.0" text-anchor="middle" font-size="14" font-weight="700" fill="#163D1E">Pull Request</text>
+<text x="610.0" y="866.0" text-anchor="middle" font-size="12" fill="#3F5B45">新增依赖须说明理由</text>
+<rect x="285" y="812" width="170" height="84" rx="7" fill="#FEF2F1" stroke="#B42318" stroke-width="1.5"/>
+<text x="370.0" y="842.0" text-anchor="middle" font-size="14" font-weight="700" fill="#7A1610">CI 门禁</text>
+<text x="370.0" y="858.0" text-anchor="middle" font-size="12" fill="#8A2C24">ruff · pyright · pytest</text>
+<text x="370.0" y="874.0" text-anchor="middle" font-size="12" fill="#8A2C24">import-linter · 金标集 · 成本</text>
+<rect x="45" y="812" width="170" height="84" rx="7" fill="#FFFFFF" stroke="#3F8F4E" stroke-width="1.5"/>
+<text x="130.0" y="850.0" text-anchor="middle" font-size="14" font-weight="700" fill="#163D1E">master 分支</text>
+<text x="130.0" y="866.0" text-anchor="middle" font-size="12" fill="#3F5B45">唯一可部署来源</text>
+<rect x="500" y="934" width="220" height="70" rx="7" fill="#F3F9F3" stroke="#3F8F4E" stroke-width="1.5"/>
+<text x="610.0" y="957.0" text-anchor="middle" font-size="14" font-weight="700" fill="#163D1E">锁定文件 · CODEOWNERS</text>
+<text x="610.0" y="973.0" text-anchor="middle" font-size="12" fill="#3F5B45">contracts · registry · scoring</text>
+<text x="610.0" y="989.0" text-anchor="middle" font-size="12" fill="#3F5B45">redlines · golden</text>
+<path d="M215,170 L245,170 L245,392" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M215,280 L245,280" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M215,390 L245,390" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M245,392 L295,392" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M215,512 L295,512" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M380,204 L380,240" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrE)"/>
+<text x="400" y="227" text-anchor="start" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">触发</text>
+<path d="M380,304 L380,350" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)" marker-start="url(#arrS)"/>
+<text x="392" y="332" text-anchor="start" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">请求 / 响应</text>
+<path d="M465,262 L490,262 L490,177 L520,177" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M465,512 L490,512 L490,177 L520,177" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M602,218 L602,250" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M602,314 L602,345" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M520,290 L508,290 L508,602 L520,602" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)" marker-start="url(#arrS)"/>
+<path d="M685,602 L1225,602" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)" marker-start="url(#arrS)"/>
+<text x="1060" y="596" text-anchor="middle" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">HTTPS</text>
+<path d="M685,270 L712,270 L712,182 L745,182" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="706" y="242" text-anchor="end" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">政策类</text>
+<path d="M685,377 L737,377" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M830,224 L830,262" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="840" y="248" text-anchor="start" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">效应路由</text>
+<path d="M830,444 L830,480" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M915,512 L975,512" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M975,342 L950,342 L950,496 L915,496" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M1145,512 L1225,512" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M1320,480 L1320,384" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="1330" y="438" text-anchor="start" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">推送</text>
+<path d="M1225,342 L1145,342" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="1185" y="336" text-anchor="middle" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">回写</text>
+<path d="M1145,172 L1225,172" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="1185" y="166" text-anchor="middle" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">每日</text>
+<path d="M380,654 L380,726 L1090,726 L1090,812" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrE)"/>
+<text x="735" y="720" text-anchor="middle" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">采集连续失败 3 次 → 自动开单交给 Agent 修</text>
+<path d="M1415,342 L1446,342 L1446,790 L1330,790 L1330,812" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrE)"/>
+<text x="1438" y="782" text-anchor="end" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">批准任务列表</text>
+<path d="M1245,854 L1175,854" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M1005,854 L935,854" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M765,854 L695,854" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="730" y="846" text-anchor="middle" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">提交</text>
+<path d="M525,854 L455,854" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M285,854 L215,854" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="250" y="846" text-anchor="middle" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">全绿合并</text>
+<path d="M610,934 L610,896" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrE)"/>
+<text x="620" y="922" text-anchor="start" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">改动须你批准</text>
+<path d="M45,854 L16,854 L16,742 L300,742 L300,706" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="160" y="736" text-anchor="middle" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">部署脚本</text>
+</svg>
