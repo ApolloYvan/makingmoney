@@ -5,43 +5,43 @@
 </defs>
 <rect width="1470" height="1050" fill="#FFFFFF"/>
 <text x="30" y="38" text-anchor="start" font-size="20" font-weight="700" fill="#111827">机会雷达 · 整体技术架构</text>
-<text x="30" y="58" text-anchor="start" font-size="12" font-weight="400" fill="#6B7280">运行平面跑数据，开发平面跑代码；LLM 只做抽取，打分、合并、过滤全部由确定性代码完成</text>
-<rect x="860" y="28" width="16" height="12" rx="3" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
-<text x="882" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">确定性代码</text>
-<rect x="1000" y="28" width="16" height="12" rx="3" fill="#FFF7E8" stroke="#C98A1B" stroke-width="1.5"/>
-<text x="1022" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">LLM 参与（需校验）</text>
-<rect x="1140" y="28" width="16" height="12" rx="3" fill="#FEF2F1" stroke="#B42318" stroke-width="1.5"/>
-<text x="1162" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">硬闸门</text>
-<rect x="1280" y="28" width="16" height="12" rx="3" fill="#FFFFFF" stroke="#3F8F4E" stroke-width="1.5"/>
-<text x="1302" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">开发平面</text>
-<path d="M860,54 L890,54" fill="none" stroke="#475569" stroke-width="1.5"/>
-<text x="896" y="58" text-anchor="start" font-size="12" font-weight="400" fill="#374151">数据流</text>
-<path d="M960,54 L990,54" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="5 4"/>
-<text x="996" y="58" text-anchor="start" font-size="12" font-weight="400" fill="#374151">调度 / 控制 / 审批</text>
+<text x="30" y="58" text-anchor="start" font-size="12" font-weight="400" fill="#6B7280">上半部分是工具本身，下半部分是开发流程；大模型只做提取，打分、合并、过滤全部由代码完成</text>
+<rect x="820" y="28" width="16" height="12" rx="3" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="842" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">普通代码</text>
+<rect x="972" y="28" width="16" height="12" rx="3" fill="#FFF7E8" stroke="#C98A1B" stroke-width="1.5"/>
+<text x="994" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">大模型参与（需校验）</text>
+<rect x="1124" y="28" width="16" height="12" rx="3" fill="#FEF2F1" stroke="#B42318" stroke-width="1.5"/>
+<text x="1146" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">硬性关卡</text>
+<rect x="1276" y="28" width="16" height="12" rx="3" fill="#FFFFFF" stroke="#3F8F4E" stroke-width="1.5"/>
+<text x="1298" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">开发流程</text>
+<path d="M820,54 L850,54" fill="none" stroke="#475569" stroke-width="1.5"/>
+<text x="856" y="58" text-anchor="start" font-size="12" font-weight="400" fill="#374151">数据流</text>
+<path d="M920,54 L950,54" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="956" y="58" text-anchor="start" font-size="12" font-weight="400" fill="#374151">调度 / 控制 / 审批</text>
 <rect x="30" y="76" width="200" height="630" rx="10" fill="#F6F7F9" stroke="#6B7280" stroke-width="1.2"/>
 <text x="42" y="96" font-size="13" font-weight="700" fill="#6B7280">外部信号源</text>
 <rect x="260" y="76" width="920" height="630" rx="10" fill="#F1F5FD" stroke="#3B5B92" stroke-width="1.2"/>
-<text x="272" y="96" font-size="13" font-weight="700" fill="#3B5B92">运行平面 · 国内云轻量服务器 2C4G 单机 · 全部状态落在一个 SQLite（WAL）文件</text>
+<text x="272" y="96" font-size="13" font-weight="700" fill="#3B5B92">工具本身 · 一台国内云轻量服务器（2 核 4G）· 全部数据存在一个 SQLite 文件里</text>
 <rect x="280" y="112" width="200" height="574" rx="10" fill="#FFFFFF" stroke="#6E86B5" stroke-width="1.2"/>
 <text x="292" y="132" font-size="12" font-weight="700" fill="#6E86B5">① 采集层</text>
 <rect x="500" y="112" width="200" height="574" rx="10" fill="#FFFFFF" stroke="#6E86B5" stroke-width="1.2"/>
 <text x="512" y="132" font-size="12" font-weight="700" fill="#6E86B5">② 共享底座</text>
 <rect x="720" y="112" width="220" height="574" rx="10" fill="#FFFFFF" stroke="#6E86B5" stroke-width="1.2"/>
-<text x="732" y="132" font-size="12" font-weight="700" fill="#6E86B5">③ 打分层 · 纯代码，禁止调用 LLM</text>
+<text x="732" y="132" font-size="12" font-weight="700" fill="#6E86B5">③ 打分层 · 不许调用大模型</text>
 <rect x="960" y="112" width="200" height="574" rx="10" fill="#FFFFFF" stroke="#6E86B5" stroke-width="1.2"/>
 <text x="972" y="132" font-size="12" font-weight="700" fill="#6E86B5">④ 输出与回写</text>
 <rect x="1210" y="76" width="220" height="630" rx="10" fill="#F6F7F9" stroke="#6B7280" stroke-width="1.2"/>
 <text x="1222" y="96" font-size="13" font-weight="700" fill="#6B7280">外部服务与你</text>
 <rect x="45" y="130" width="170" height="80" rx="7" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
-<text x="130.0" y="158.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">技术扩散链</text>
+<text x="130.0" y="158.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">技术普及</text>
 <text x="130.0" y="174.0" text-anchor="middle" font-size="12" fill="#4B5563">GitHub · 魔搭</text>
 <text x="130.0" y="190.0" text-anchor="middle" font-size="12" fill="#4B5563">npm · PyPI · 社区 RSS</text>
 <rect x="45" y="240" width="170" height="80" rx="7" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
-<text x="130.0" y="268.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">经营压力链</text>
+<text x="130.0" y="268.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">经营压力</text>
 <text x="130.0" y="284.0" text-anchor="middle" font-size="12" fill="#4B5563">统计局 · 中小企业指数</text>
 <text x="130.0" y="300.0" text-anchor="middle" font-size="12" fill="#4B5563">互动易 · 法院案例</text>
 <rect x="45" y="350" width="170" height="80" rx="7" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
-<text x="130.0" y="378.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">政策链</text>
+<text x="130.0" y="378.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">政策</text>
 <text x="130.0" y="394.0" text-anchor="middle" font-size="12" fill="#4B5563">国务院 · 部委 · 省市</text>
 <text x="130.0" y="410.0" text-anchor="middle" font-size="12" fill="#4B5563">申报通知 · 处罚公示</text>
 <rect x="45" y="480" width="170" height="64" rx="7" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
@@ -115,7 +115,7 @@
 <text x="1320.0" y="596.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">国内已备案模型</text>
 <text x="1320.0" y="612.0" text-anchor="middle" font-size="12" fill="#4B5563">官方 API，不走中转</text>
 <rect x="30" y="758" width="1400" height="270" rx="10" fill="#F3F9F3" stroke="#2F6F3B" stroke-width="1.2"/>
-<text x="42" y="778" font-size="13" font-weight="700" fill="#2F6F3B">开发平面 · GitHub + 开发 Agent（流水线自右向左）</text>
+<text x="42" y="778" font-size="13" font-weight="700" fill="#2F6F3B">开发流程 · GitHub + AI 编程 Agent（自右向左）</text>
 <rect x="1245" y="812" width="170" height="84" rx="7" fill="#FFFFFF" stroke="#3F8F4E" stroke-width="1.5"/>
 <text x="1330.0" y="842.0" text-anchor="middle" font-size="14" font-weight="700" fill="#163D1E">规划会话</text>
 <text x="1330.0" y="858.0" text-anchor="middle" font-size="12" fill="#3F5B45">按策划案拆出</text>
