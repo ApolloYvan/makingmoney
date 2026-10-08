@@ -1,7 +1,7 @@
 ﻿名称,所属线,获取方式,频率,有没有金额,一期,入口,备注
 GitHub,技术普及,官方 API 或网页,每周,无,是,https://github.com/trending,看星标和 fork 增速、高频 issue
 魔搭,技术普及,公开接口,每天,无,,https://modelscope.cn,
-npm和PyPI下载量,技术普及,官方统计接口,每周,无,,,
+npm和PyPI下载量,技术普及,官方统计接口,每周,无,,https://www.npmjs.com ；https://pypistats.org,
 Hacker News,技术普及,官方 API 或 RSS,每天,无,是,https://news.ycombinator.com,国内访问不了就不接
 Product Hunt,技术普及,官方 API 或 RSS,每天,无,是,https://www.producthunt.com,国内访问不了就不接
 TrustMRR,技术普及,低频读取公开页面,每周,有,,https://trustmrr.com,
@@ -9,23 +9,23 @@ OpenRouter应用排行,技术普及,低频读取公开页面,每周,无,,https:/
 linux.do,技术普及,公开接口和 RSS,每天,无,是,https://linux.do,
 V2EX,技术普及,公开接口和 RSS,每天,无,是,https://www.v2ex.com,
 掘金,技术普及,公开页面,每天,无,是,https://juejin.cn,
-国内模型厂商价格和公告,技术普及,监测页面变化,每天,有,是,,具体页面由我补充，如 DeepSeek、阿里云百炼、火山方舟、智谱、月之暗面
-云厂商产品公告,技术普及,监测页面变化,每天,无,是,,阿里云、腾讯云、火山引擎、百度智能云；具体页面由我补充
-工信部NVDB和CNCERT,技术普及,公开公告,每天,无,,,
-闲鱼淘宝和知识付费平台,技术普及,我手动看，每周 20 个关键词,每周,有,是,,封闭平台，只由我手动看，Claude 不采
-搜索指数,技术普及,我手动查,每周,无,,,巨量算数、百度指数、微信指数
+国内模型厂商价格和公告,技术普及,监测页面变化,每天,有,是,DeepSeek https://api-docs.deepseek.com/quick_start/pricing/ ；阿里云百炼 https://help.aliyun.com/zh/model-studio/model-pricing ；火山方舟 https://www.volcengine.com/docs/82379/1099320 ；智谱 https://open.bigmodel.cn/pricing ；月之暗面 https://platform.moonshot.cn/docs/pricing,价格页；新模型公告看 DeepSeek 更新日志 https://api-docs.deepseek.com/updates/ 和火山方舟产品更新公告 https://docs.volcengine.com/docs/ark/product-update-announcements?lang=zh
+云厂商产品公告,技术普及,监测页面变化,每天,无,是,阿里云 https://cn.aliyun.com/product/news/ ；腾讯云 https://cloud.tencent.com/product/events ；火山引擎 https://www.volcengine.com/news ；百度千帆 https://cloud.baidu.com/doc/qianfan/s/Kmh4stnjp,重点看大模型、Agent、一键部署类的新产品和降价
+工信部NVDB和CNCERT,技术普及,公开公告,每天,无,,CNCERT 预警通报 https://12387.cert.org.cn/yjtb/index_1.html ；CNCERT https://www.cert.org.cn,NVDB 的官网网址待确认；漏洞公告也可以看 CNVD https://www.cnvd.org.cn
+闲鱼淘宝和知识付费平台,技术普及,我手动看，每周 20 个关键词,每周,有,是,闲鱼 https://www.goofish.com ；淘宝 https://www.taobao.com ；极客时间 https://time.geekbang.org,封闭平台，只由我手动看，Claude 不采
+搜索指数,技术普及,我手动查,每周,无,,百度指数 https://index.baidu.com ；抖音指数（原巨量算数）https://trendinsight.oceanengine.com,巨量算数 2026 年 1 月起改为抖音指数，要用抖音账号登录；微信指数在微信里搜索使用，没有网页版
 国家统计局,经营压力,公开发布,每月,有,是,https://www.stats.gov.cn,规模以上工业企业财务数据
-中小企业发展指数,经营压力,公开发布,每季度,无,是,,中国中小企业协会发布
+中小企业发展指数,经营压力,公开发布,每季度,无,是,,中国中小企业协会每月 9 到 13 日前后发布上月数据，官网网址待确认；可以搜新华网、中新网等的转载
 互动易和e互动,经营压力,低频读取公开页面,每周,无,是,https://irm.cninfo.com.cn,上证 e 互动：https://sns.sseinfo.com
 上市公司定期报告,经营压力,交易所公开披露,每半年,有,,https://www.cninfo.com.cn,
-法院典型案例,经营压力,公开发布,每月,无,,,最高法和各地法院的典型案例、纠纷白皮书
-招聘岗位,经营压力,我手动抽样,每月,有,,,
-新职业和紧缺工种目录,经营压力,公开发布,每季度,无,,,人社部新职业、各地紧缺工种目录
+法院典型案例,经营压力,公开发布,每月,无,,最高人民法院 https://www.court.gov.cn,最高法和各地法院的典型案例、纠纷白皮书
+招聘岗位,经营压力,我手动抽样,每月,有,,BOSS直聘 https://www.zhipin.com,封闭平台，只由我手动抽样
+新职业和紧缺工种目录,经营压力,公开发布,每季度,无,,人社部 https://www.mohrss.gov.cn,人社部新职业、各地紧缺工种目录
 线下访谈,经营压力,我自己录入,随时,有,是,访谈/,信号的链接填访谈文件路径，摘录填对方原话
 国务院政策文件库,政策,公开发布,每天,无,是,https://www.gov.cn/zhengce/zhengceku/,含国务院年度立法工作计划
-征求意见,政策,公开发布,每天,无,是,,全国人大法律草案意见征集、司法部和各部委征求意见稿
-部委公告,政策,公开发布,每天,无,,,网信办、工信部、发改委、市场监管总局、财政部、税务总局、人社部、国家数据局
-本省市申报通知,政策,公开发布,每天,有,是,,先只看我所在的省市：经信、发改、数据局；入口由我补充
-政府采购和公共资源交易,政策,公开公告,每天,有,,,
-标准平台,政策,公开发布,每周,无,,,国家标准和团体标准平台
-行政处罚和典型案例,政策,公开发布,每周,无,是,,专项行动、行政处罚公示、两高典型案例、3·15
+征求意见,政策,公开发布,每天,无,是,全国人大法律草案征求意见 http://www.npc.gov.cn/npc/flcazqyj/node_8176.htm ；司法部立法意见征集 https://www.moj.gov.cn/lfyjzj/lflfyjzj/,各部委自己的征求意见稿也会同步到司法部这个栏目
+部委公告,政策,公开发布,每天,无,,网信办 https://www.cac.gov.cn ；工信部 https://www.miit.gov.cn ；发改委 https://www.ndrc.gov.cn ；市场监管总局 https://www.samr.gov.cn ；财政部 https://www.mof.gov.cn ；税务总局 https://www.chinatax.gov.cn ；人社部 https://www.mohrss.gov.cn ；国家数据局 https://www.nda.gov.cn/sjj/zwgk/tzgg/list/index_pc_1.html,网信办、工信部、发改委、市场监管总局、财政部、税务总局、人社部、国家数据局
+本省市申报通知,政策,公开发布,每天,有,是,浙江省经信厅 https://jxt.zj.gov.cn/col/col1229567696/index.html ；浙江省发改委 https://fzggw.zj.gov.cn ；浙江省科技厅 https://kjt.zj.gov.cn ；浙江省数据局 https://sjj.zj.gov.cn ；杭州市经信局 https://jxj.hangzhou.gov.cn ；杭州市发改委 https://drc.hangzhou.gov.cn/col/col1229494020/index.html ；杭州市政府门户 https://www.hangzhou.gov.cn,浙江省杭州市。浙江省数据局网址待确认；杭州市数据资源管理局没找到独立网站，它的文件发在杭州市政府门户上，数据开放平台 https://data.hangzhou.gov.cn 也有政策动态
+政府采购和公共资源交易,政策,公开公告,每天,有,,中国政府采购网 https://www.ccgp.gov.cn ；全国公共资源交易平台 https://www.ggzy.gov.cn ；浙江政府采购网 https://zfcg.czt.zj.gov.cn,浙江政府采购网网址来自旧采购文件，待确认
+标准平台,政策,公开发布,每周,无,,全国标准信息公共服务平台 https://std.samr.gov.cn ；全国团体标准信息平台 https://www.ttbz.org.cn,国家标准和团体标准平台
+行政处罚和典型案例,政策,公开发布,每周,无,是,信用中国信息公示 https://www.creditchina.gov.cn/xinxigongshi/ ；最高人民检察院 https://www.spp.gov.cn,浙江的处罚信息看信用中国（浙江）；国家企业信用信息公示系统需要验证码，不用
