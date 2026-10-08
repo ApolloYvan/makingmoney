@@ -12,6 +12,7 @@
 用法（在仓库根目录）：
     python3 radar/规则/score.py                    以今天为截止日生成周报
     python3 radar/规则/score.py --date 2026-10-18  指定截止日
+    python3 radar/规则/score.py --since 2026-09-18 指定周报统计区间的起点（默认是截止日前 7 天）
     python3 radar/规则/score.py --check            只检查数据，有问题时返回非 0
 """
 from __future__ import annotations
@@ -272,7 +273,7 @@ def load_signals(root: Path, rules: dict, sources: set[str], direction_ids: set[
     out: list[Signal] = []
     ignored: list[str] = []
     seen_ids: set[str] = set()
-    seen_links: set[tuple[str, str]] = set()
+    seen_excerpts: set[tuple[str, str]] = set()
 
     for i, r in enumerate(read_csv(root / "数据" / "信号.csv"), start=2):
         sid = r.get("编号") or f"第{i}行"
@@ -318,12 +319,12 @@ def load_signals(root: Path, rules: dict, sources: set[str], direction_ids: set[
         if direction and direction not in direction_ids:
             bad(f"方向编号 {direction!r} 在方向.csv 里不存在")
             continue
-        key = (r["链接"], direction)
-        if key in seen_links:
-            bad("同一链接已经挂在这个方向下，重复")
+        key = (r["链接"], r["原文摘录"])
+        if key in seen_excerpts:
+            bad("同一链接、同一段摘录已经记过，重复")
             continue
         seen_ids.add(sid)
-        seen_links.add(key)
+        seen_excerpts.add(key)
         out.append(Signal(sid, d, r["来源"], line, r["阶段"], r["链接"], r["原文摘录"],
                           direction, pay, amount))
     return out, ignored
@@ -438,7 +439,7 @@ def check_policies(rows: list[dict[str, str]], rules: dict) -> list[str]:
     return notes
 
 
-def run(root: Path, until: date) -> Result:
+def run(root: Path, until: date, since: date | None = None) -> Result:
     rules = load_rules(root)
     g = rules["通用"]
     source_rows = read_csv(root / "规则" / "来源清单.csv")
@@ -495,7 +496,7 @@ def run(root: Path, until: date) -> Result:
         if parse_date(v.get("日期", "")) is None:
             problems.append(f"验证.csv 第 {i} 行：日期格式不对")
 
-    start = until - timedelta(days=int(g["扩散回看天数"]) - 1)
+    start = since or until - timedelta(days=int(g["扩散回看天数"]) - 1)
     return Result(start, until, signals, ignored, problems, long_, fast, policies,
                   policy_notes, validations, source_names, phase1)
 
@@ -664,6 +665,7 @@ def render(res: Result, rules: dict, root: Path) -> str:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="机会雷达第一阶段打分脚本")
     ap.add_argument("--date", help="截止日，YYYY-MM-DD，默认今天")
+    ap.add_argument("--since", help="周报统计区间的起点，YYYY-MM-DD，默认是截止日前 7 天")
     ap.add_argument("--root", help="radar 目录，默认是本脚本的上一级目录")
     ap.add_argument("--check", action="store_true", help="只检查数据，不生成周报")
     args = ap.parse_args(argv)
@@ -675,7 +677,14 @@ def main(argv: list[str] | None = None) -> int:
         return 2
 
     rules = load_rules(root)
-    res = run(root, until)
+    since = parse_date(args.since) if args.since else None
+    if args.since and since is None:
+        print(f"日期格式不对：{args.since}，应为 YYYY-MM-DD", file=sys.stderr)
+        return 2
+    if since and since > until:
+        print("--since 不能晚于截止日", file=sys.stderr)
+        return 2
+    res = run(root, until, since)
     issues = res.ignored + res.problems + res.policy_notes
 
     if args.check:

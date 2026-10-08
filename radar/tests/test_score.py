@@ -28,12 +28,12 @@ VAL_COLS = ["日期", "方向编号", "方式", "结果", "证据", "备注"]
 TODAY = date(2026, 10, 18)
 
 LONG_OK = {
-    "编号": "D001", "名称": "小微制造企业回款管理", "类型": "长钱", "状态": "候选", "命中不碰": "否",
-    "准入成本": "只需营业执照", "每月金额元": "20000", "金额依据": "访谈 1 原话",
+    "编号": "D001", "名称": "示例长钱方向", "类型": "长钱", "状态": "候选", "命中不碰": "否",
+    "准入成本": "只需营业执照", "每月金额元": "20000", "金额依据": "见访谈 1",
     "频次": "每月", "持续性": "三年以上", "技术门槛": "需要高可靠或权限审计", "决策链": "老板一人拍板",
 }
 FAST_OK = {
-    "编号": "D002", "名称": "个人 AI 助手代部署", "类型": "快钱", "状态": "观察中", "命中不碰": "否",
+    "编号": "D002", "名称": "示例快钱方向", "类型": "快钱", "状态": "观察中", "命中不碰": "否",
     "准入成本": "只需营业执照", "窗口剩余": "无大厂进场",
 }
 
@@ -163,7 +163,7 @@ class ScoreTest(unittest.TestCase):
         self.assertEqual(code, 0)
         text = (self.tmp / "周报" / "2026-W42.md").read_text(encoding="utf-8")
         self.assertIn("## 长钱候选", text)
-        self.assertIn("D001 小微制造企业回款管理", text)
+        self.assertIn("D001 示例长钱方向", text)
         self.assertIn("确认痛点", text)
 
     def test_fallback_toml_parser_matches_tomllib(self):
@@ -179,6 +179,24 @@ class ScoreTest(unittest.TestCase):
     def test_fallback_toml_parser_handles_multiline_arrays(self):
         parsed = score.parse_simple_toml('["a"."b"]\n"档位" = [\n  [7, 5], # 注释\n  [0, 1],\n]\n"x" = 0.5\n')
         self.assertEqual(parsed, {"a": {"b": {"档位": [[7, 5], [0, 1]], "x": 0.5}}})
+
+    def test_same_page_can_yield_several_signals(self):
+        res = self.build([LONG_OK], [
+            sig(1, "2026-10-15", "国家统计局", "经营压力", "压力出现", "", link="https://example.com/t", excerpt="甲"),
+            sig(2, "2026-10-15", "国家统计局", "经营压力", "压力出现", "", link="https://example.com/t", excerpt="乙"),
+            sig(3, "2026-10-15", "国家统计局", "经营压力", "压力出现", "", link="https://example.com/t", excerpt="甲"),
+        ])
+        self.assertEqual([x.id for x in res.signals], ["S0001", "S0002"])
+        self.assertEqual(len(res.ignored), 1)
+
+    def test_since_sets_report_window(self):
+        self.build([LONG_OK], [sig(1, "2026-09-25", "线下访谈", "经营压力", "开始花钱", "D001")])
+        code = score.main(["--root", str(self.tmp), "--date", "2026-10-18", "--since", "2026-09-18"])
+        self.assertEqual(code, 0)
+        text = (self.tmp / "周报" / "2026-W42.md").read_text(encoding="utf-8")
+        self.assertIn("统计区间 2026-09-18 至 2026-10-18", text)
+        self.assertIn("本期新增 1 条", text)
+        self.assertEqual(score.main(["--root", str(self.tmp), "--date", "2026-10-18", "--since", "2026-10-19"]), 2)
 
     def test_check_mode_returns_nonzero_on_problems(self):
         self.build([LONG_OK], [sig(1, "2026-10-15", "线下访谈", "经营压力", "开始花钱", "D001", link="")])
