@@ -15,7 +15,7 @@ V2EX,技术普及,公开接口和 RSS,每天,无,是,https://www.v2ex.com,
 闲鱼淘宝和知识付费平台,技术普及,我手动看，每周 20 个关键词,每周,有,是,闲鱼 https://www.goofish.com ；淘宝 https://www.taobao.com ；极客时间 https://time.geekbang.org,封闭平台，只由我手动看，Claude 不采
 搜索指数,技术普及,我手动查,每周,无,,百度指数 https://index.baidu.com ；抖音指数（原巨量算数）https://trendinsight.oceanengine.com,巨量算数 2026 年 1 月起改为抖音指数，要用抖音账号登录；微信指数在微信里搜索使用，没有网页版
 国家统计局,经营压力,公开发布,每月,有,是,https://www.stats.gov.cn,规模以上工业企业财务数据
-中小企业发展指数,经营压力,公开发布,每季度,无,是,,中国中小企业协会每月 9 到 13 日前后发布上月数据，官网网址待确认；可以搜新华网、中新网等的转载
+中小企业发展指数,经营压力,公开发布,每月,无,是,中国中小企业协会 https://www.ca-sme.org ；指数栏目 https://www.ca-sme.org/category/Category/list/cid/364/page/1 ；协会动态 https://www.ca-sme.org/category/Category/index/page/1/cid/285,每月中旬前后发布上月数据，近期多发在协会动态栏目；2026 年 7 月起协会在优化指数，暂时只发布总指数，不发分项和分析
 互动易和e互动,经营压力,低频读取公开页面,每周,无,是,https://irm.cninfo.com.cn,上证 e 互动：https://sns.sseinfo.com
 上市公司定期报告,经营压力,交易所公开披露,每半年,有,,https://www.cninfo.com.cn,
 法院典型案例,经营压力,公开发布,每月,无,,最高人民法院 https://www.court.gov.cn,最高法和各地法院的典型案例、纠纷白皮书
