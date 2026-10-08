@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="560" viewBox="0 0 1300 560" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC','WenQuanYi Zen Hei',sans-serif">
+<defs>
+<marker id="arrE" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker>
+</defs>
+<rect width="1300" height="560" fill="#FFFFFF"/>
+<text x="30" y="38" text-anchor="start" font-size="20" font-weight="700" fill="#111827">第一阶段 · 每周循环</text>
+<text x="30" y="58" text-anchor="start" font-size="12" font-weight="400" fill="#6B7280">全部在我自己的电脑上进行；规则和数据都放在一个 git 文件夹里，换模型、换客户端都不会丢</text>
+<rect x="760" y="28" width="16" height="12" rx="3" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="782" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">普通代码</text>
+<rect x="920" y="28" width="16" height="12" rx="3" fill="#FFF7E8" stroke="#C98A1B" stroke-width="1.5"/>
+<text x="942" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">大模型（需核对）</text>
+<rect x="1080" y="28" width="16" height="12" rx="3" fill="#FEF2F1" stroke="#B42318" stroke-width="1.5"/>
+<text x="1102" y="39" text-anchor="start" font-size="12" font-weight="400" fill="#374151">只有我能改</text>
+<rect x="30" y="80" width="1240" height="450" rx="10" fill="#F6F7F9" stroke="#6B7280" stroke-width="1.2"/>
+<text x="42" y="100" font-size="13" font-weight="700" fill="#6B7280">我的电脑</text>
+<text x="52" y="122" text-anchor="start" font-size="12" font-weight="400" fill="#6B7280">每周日晚上，约 1 小时</text>
+<rect x="60" y="140" width="200" height="96" rx="7" fill="#FEF2F1" stroke="#B42318" stroke-width="1.5"/>
+<text x="160.0" y="176.0" text-anchor="middle" font-size="14" font-weight="700" fill="#7A1610">规则与来源清单</text>
+<text x="160.0" y="192.0" text-anchor="middle" font-size="12" fill="#8A2C24">来源清单 · 打分规则</text>
+<text x="160.0" y="208.0" text-anchor="middle" font-size="12" fill="#8A2C24">不碰的事 · 两份固定指令</text>
+<rect x="305" y="140" width="200" height="96" rx="7" fill="#FFF7E8" stroke="#C98A1B" stroke-width="1.5"/>
+<text x="405.0" y="168.0" text-anchor="middle" font-size="14" font-weight="700" fill="#5A3B00">Claude 桌面端</text>
+<text x="405.0" y="184.0" text-anchor="middle" font-size="12" fill="#7A5A1F">按清单搜索、阅读</text>
+<text x="405.0" y="200.0" text-anchor="middle" font-size="12" fill="#7A5A1F">每条信号带链接和原文摘录</text>
+<text x="405.0" y="216.0" text-anchor="middle" font-size="12" fill="#7A5A1F">分项只从固定选项里选</text>
+<path d="M550,144 a100.0,8 0 0,0 200,0 a100.0,8 0 0,0 -200,0 v88 a100.0,8 0 0,0 200,0 v-88" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="650.0" y="190.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">数据文件</text>
+<text x="650.0" y="207.0" text-anchor="middle" font-size="12" fill="#4B5563">信号 · 方向 · 政策 · 验证</text>
+<text x="650.0" y="223.0" text-anchor="middle" font-size="12" fill="#4B5563">CSV，只追加</text>
+<rect x="795" y="140" width="200" height="96" rx="7" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="895.0" y="176.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">打分脚本 score.py</text>
+<text x="895.0" y="192.0" text-anchor="middle" font-size="12" fill="#4B5563">按规则换算分数</text>
+<text x="895.0" y="208.0" text-anchor="middle" font-size="12" fill="#4B5563">统计交汇、过门槛</text>
+<rect x="1040" y="140" width="200" height="96" rx="7" fill="#FFFFFF" stroke="#4F6FA8" stroke-width="1.5"/>
+<text x="1140.0" y="176.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">周报</text>
+<text x="1140.0" y="192.0" text-anchor="middle" font-size="12" fill="#4B5563">前 5 个方向</text>
+<text x="1140.0" y="208.0" text-anchor="middle" font-size="12" fill="#4B5563">每个都附证据链接</text>
+<rect x="1040" y="350" width="200" height="96" rx="7" fill="#1F2937" stroke="#1F2937" stroke-width="1.5"/>
+<text x="1140.0" y="386.0" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">我</text>
+<text x="1140.0" y="402.0" text-anchor="middle" font-size="12" fill="#D1D5DB">抽查 5 条链接</text>
+<text x="1140.0" y="418.0" text-anchor="middle" font-size="12" fill="#D1D5DB">看 git diff：规则没被动过</text>
+<rect x="795" y="350" width="200" height="96" rx="7" fill="#FFF7E8" stroke="#C98A1B" stroke-width="1.5"/>
+<text x="895.0" y="386.0" text-anchor="middle" font-size="14" font-weight="700" fill="#5A3B00">GPT 复核</text>
+<text x="895.0" y="402.0" text-anchor="middle" font-size="12" fill="#7A5A1F">专门挑毛病：</text>
+<text x="895.0" y="418.0" text-anchor="middle" font-size="12" fill="#7A5A1F">证据牵强吗？窗口关了吗？</text>
+<rect x="550" y="350" width="200" height="96" rx="7" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
+<text x="650.0" y="386.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">线下验证</text>
+<text x="650.0" y="402.0" text-anchor="middle" font-size="12" fill="#4B5563">访谈 · 定金测试</text>
+<text x="650.0" y="418.0" text-anchor="middle" font-size="12" fill="#4B5563">每周至少 2 次</text>
+<rect x="305" y="350" width="200" height="96" rx="7" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
+<text x="405.0" y="386.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2A44">访谈记录</text>
+<text x="405.0" y="402.0" text-anchor="middle" font-size="12" fill="#4B5563">手机录音，App 转写整理</text>
+<text x="405.0" y="418.0" text-anchor="middle" font-size="12" fill="#4B5563">不记姓名和电话</text>
+<path d="M260,188 L305,188" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="282.5" y="180" text-anchor="middle" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">读取</text>
+<path d="M505,188 L550,188" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="527.5" y="180" text-anchor="middle" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">追加</text>
+<path d="M750,188 L795,188" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M995,188 L1040,188" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="1017.5" y="180" text-anchor="middle" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">生成</text>
+<path d="M1140.0,236 L1140.0,350" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="1150.0" y="297.0" text-anchor="start" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">推给我</text>
+<path d="M1040,398 L995,398" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="1017.5" y="390" text-anchor="middle" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">前 5 个</text>
+<path d="M795,398 L750,398" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="772.5" y="390" text-anchor="middle" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">筛选后</text>
+<path d="M550,398 L505,398" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<path d="M405.0,350 L405.0,236" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrE)"/>
+<text x="415.0" y="297.0" text-anchor="start" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">下周一并整理</text>
+<path d="M650.0,350 L650.0,240" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrE)"/>
+<text x="660.0" y="297.0" text-anchor="start" font-size="12" fill="#334155" stroke="#FFFFFF" stroke-width="4" paint-order="stroke" stroke-linejoin="round">验证结果写入，用来调整来源权重</text>
+<text x="60" y="500" text-anchor="start" font-size="12" font-weight="400" fill="#6B7280">账号失效时，换一家国产模型的客户端，照同一套文件继续跑。</text>
+</svg>
