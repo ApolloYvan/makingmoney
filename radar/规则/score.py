@@ -7,7 +7,7 @@
 分数不存进任何文件，每次都按当前规则从头算，所以规则一改，历史方向会全部按新规则重算。
 大模型不参与这里的任何计算。
 
-只用标准库，需要 Python 3.11 以上。
+只用标准库，Python 3.9 以上都能跑（macOS 自带的就是 3.9）。
 
 用法（在仓库根目录）：
     python3 radar/规则/score.py                    以今天为截止日生成周报
@@ -20,10 +20,14 @@ import argparse
 import csv
 import subprocess
 import sys
-import tomllib
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
 from pathlib import Path
+
+try:
+    import tomllib  # Python 3.11 起自带
+except ModuleNotFoundError:  # 更早的版本用下面的简易解析器
+    tomllib = None  # type: ignore[assignment]
 
 RULES_DIR = Path(__file__).resolve().parent
 DEFAULT_ROOT = RULES_DIR.parent
@@ -137,8 +141,127 @@ class Result:
 # ---------------------------------------------------------------- 核心逻辑
 
 def load_rules(root: Path) -> dict:
-    with (root / "规则" / "打分规则.toml").open("rb") as f:
-        return tomllib.load(f)
+    path = root / "规则" / "打分规则.toml"
+    if tomllib is not None:
+        with path.open("rb") as f:
+            return tomllib.load(f)
+    return parse_simple_toml(path.read_text(encoding="utf-8"))
+
+
+def parse_simple_toml(text: str) -> dict:
+    """给 Python 3.9、3.10 用的简易 TOML 解析器。
+
+    只支持打分规则用到的写法：[表头]（可带引号、可用点分层）、键 = 值、
+    字符串、整数、小数、true/false、可嵌套且可跨行的数组、# 注释。
+    """
+    root: dict = {}
+    table = root
+    pending = ""
+    for lineno, raw in enumerate(text.splitlines(), start=1):
+        line = _strip_comment(raw).strip()
+        if pending:
+            line = pending + " " + line
+            pending = ""
+        if not line:
+            continue
+        if line.startswith("[") and "=" not in line:
+            table = root
+            for part in _split_key(line[1:-1].strip(), lineno):
+                table = table.setdefault(part, {})
+            continue
+        if "=" not in line:
+            raise ValueError(f"打分规则.toml 第 {lineno} 行看不懂：{raw.strip()}")
+        key_text, value_text = _split_assignment(line, lineno)
+        if value_text.count("[") > value_text.count("]"):
+            pending = line  # 数组跨行，接着读下一行
+            continue
+        value, end = _parse_value(value_text, 0, lineno)
+        if value_text[end:].strip():
+            raise ValueError(f"打分规则.toml 第 {lineno} 行值的后面有多余内容")
+        keys = _split_key(key_text, lineno)
+        target = table
+        for part in keys[:-1]:
+            target = target.setdefault(part, {})
+        target[keys[-1]] = value
+    if pending:
+        raise ValueError("打分规则.toml 结尾有没闭合的数组")
+    return root
+
+
+def _strip_comment(line: str) -> str:
+    in_str = False
+    for i, ch in enumerate(line):
+        if ch == '"' and (i == 0 or line[i - 1] != "\\"):
+            in_str = not in_str
+        elif ch == "#" and not in_str:
+            return line[:i]
+    return line
+
+
+def _split_assignment(line: str, lineno: int) -> tuple[str, str]:
+    in_str = False
+    for i, ch in enumerate(line):
+        if ch == '"':
+            in_str = not in_str
+        elif ch == "=" and not in_str:
+            return line[:i].strip(), line[i + 1:].strip()
+    raise ValueError(f"打分规则.toml 第 {lineno} 行缺少等号")
+
+
+def _split_key(text: str, lineno: int) -> list[str]:
+    parts, buf, in_str, quoted = [], "", False, False
+    for ch in text:
+        if ch == '"':
+            in_str = not in_str
+            quoted = True
+        elif ch == "." and not in_str:
+            parts.append(buf if quoted else buf.strip())
+            buf, quoted = "", False
+        elif in_str or not ch.isspace():
+            buf += ch
+    parts.append(buf if quoted else buf.strip())
+    if in_str or any(p == "" for p in parts):
+        raise ValueError(f"打分规则.toml 第 {lineno} 行的键写法不对：{text}")
+    return parts
+
+
+def _parse_value(s: str, i: int, lineno: int):
+    while i < len(s) and s[i] in " ,":
+        i += 1
+    if i >= len(s):
+        raise ValueError(f"打分规则.toml 第 {lineno} 行缺少值")
+    ch = s[i]
+    if ch == '"':
+        j, out = i + 1, ""
+        while j < len(s) and s[j] != '"':
+            if s[j] == "\\" and j + 1 < len(s):
+                j += 1
+            out += s[j]
+            j += 1
+        if j >= len(s):
+            raise ValueError(f"打分规则.toml 第 {lineno} 行字符串没有闭合")
+        return out, j + 1
+    if ch == "[":
+        items, j = [], i + 1
+        while True:
+            while j < len(s) and s[j] in " ,":
+                j += 1
+            if j >= len(s):
+                raise ValueError(f"打分规则.toml 第 {lineno} 行数组没有闭合")
+            if s[j] == "]":
+                return items, j + 1
+            item, j = _parse_value(s, j, lineno)
+            items.append(item)
+    j = i
+    while j < len(s) and s[j] not in ",]":
+        j += 1
+    token = s[i:j].strip()
+    if token in ("true", "false"):
+        return token == "true", j
+    try:
+        return (float(token) if any(c in token for c in ".eE") else int(token)), j
+    except ValueError:
+        raise ValueError(f"打分规则.toml 第 {lineno} 行的值看不懂：{token}") from None
 
 
 def load_signals(root: Path, rules: dict, sources: set[str], direction_ids: set[str],

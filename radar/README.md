@@ -30,7 +30,7 @@ radar/
 
 1. 把 `规则/来源清单.csv` 里"入口"为空、备注写着"由我补充"的几行补上具体网址，尤其是"本省市申报通知"（填我所在省市的经信、发改、数据局）和"国内模型厂商价格和公告"。
 2. 通读 `规则/打分规则.toml` 和 `规则/不碰的事.md`，按自己的判断调整档位。
-3. 确认 Python 版本在 3.11 以上（`python3 --version`），然后跑一遍测试：`python3 -m unittest discover -s radar/tests`。本机 Python 太旧的话，可以用 uv：`uv run --python 3.12 radar/规则/score.py`。
+3. 跑一遍测试：`python3 -m unittest discover -s radar/tests`。Python 3.9 以上都可以，macOS 自带的 3.9 就够用，不用另外安装。
 4. 按下面"每周怎么跑"跑第一期。第一次没有历史周报，Claude 会回看最近 30 天。
 5. 把规则的改动和第一期的数据一起提交到 git。
 

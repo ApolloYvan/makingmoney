@@ -166,6 +166,20 @@ class ScoreTest(unittest.TestCase):
         self.assertIn("D001 小微制造企业回款管理", text)
         self.assertIn("确认痛点", text)
 
+    def test_fallback_toml_parser_matches_tomllib(self):
+        text = (RADAR / "规则" / "打分规则.toml").read_text(encoding="utf-8")
+        parsed = score.parse_simple_toml(text)
+        try:
+            import tomllib
+        except ModuleNotFoundError:
+            self.assertIn("快钱", parsed)  # 3.9、3.10 上没有 tomllib 可比，至少要能解析
+            return
+        self.assertEqual(parsed, tomllib.loads(text))
+
+    def test_fallback_toml_parser_handles_multiline_arrays(self):
+        parsed = score.parse_simple_toml('["a"."b"]\n"档位" = [\n  [7, 5], # 注释\n  [0, 1],\n]\n"x" = 0.5\n')
+        self.assertEqual(parsed, {"a": {"b": {"档位": [[7, 5], [0, 1]], "x": 0.5}}})
+
     def test_check_mode_returns_nonzero_on_problems(self):
         self.build([LONG_OK], [sig(1, "2026-10-15", "线下访谈", "经营压力", "开始花钱", "D001", link="")])
         self.assertEqual(score.main(["--root", str(self.tmp), "--date", "2026-10-18", "--check"]), 1)
