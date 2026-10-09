@@ -124,6 +124,17 @@ class ScoreTest(unittest.TestCase):
         res = self.build([FAST_OK], signals[:2])  # 没有付费信号
         self.assertFalse(self.find(res, "D002").passed)
 
+    def test_window_is_derived_from_signals(self):
+        row = dict(FAST_OK, 窗口剩余="")
+        base = [sig(1, "2026-10-13", "GitHub", "技术普及", "新能力出现", "D002")]
+        self.assertAlmostEqual(self.find(self.build([row], base), "D002").total, 2 * 1 * 5)
+        entered = base + [sig(2, "2026-10-14", "云厂商产品公告", "技术普及", "大厂进场", "D002")]
+        s = self.find(self.build([row], entered), "D002")
+        self.assertIsNone(s.total)
+        self.assertIn("S0002", s.missing[0])
+        s = self.find(self.build([dict(row, 窗口剩余="云厂商一键方案")], entered), "D002")
+        self.assertAlmostEqual(s.total, 3 * 1 * 1)
+
     def test_signal_without_link_or_unknown_source_is_ignored(self):
         res = self.build([LONG_OK], [
             sig(1, "2026-10-15", "线下访谈", "经营压力", "开始花钱", "D001", link=""),

@@ -358,10 +358,19 @@ def score_direction(row: dict[str, str], sigs: list[Signal], rules: dict, until:
         q = rules["快钱"]
         diffusion = tier(s.recent, q["扩散速度"]["档位"])
         pay = max((q["付费证据"][x.pay] for x in sigs), default=q["付费证据"]["无"])
-        window_opt = row.get("窗口剩余", "")
-        window = q["窗口剩余"].get(window_opt)
-        if window is None:
-            s.missing.append(f"窗口剩余（{window_opt or '未填'}）")
+        # 窗口剩余由信号决定：方向下没有"大厂进场"的信号，就算无大厂进场；
+        # 有的话，才需要在方向表里选是"同赛道融资"还是"云厂商一键方案"。
+        entered = [x for x in sigs if x.stage == "大厂进场"]
+        if entered:
+            window_opt = row.get("窗口剩余", "")
+            window = q["窗口剩余"].get(window_opt)
+            if window is None or window_opt == "无大厂进场":
+                window = None
+                ids = "、".join(x.id for x in entered[:3])
+                s.missing.append(f"窗口剩余（已有大厂进场信号 {ids}，需要选同赛道融资或云厂商一键方案）")
+        else:
+            window_opt = "无大厂进场"
+            window = q["窗口剩余"][window_opt]
         s.parts = [
             f"扩散速度 {diffusion}（近 {g['扩散回看天数']} 天新增 {s.recent} 条）",
             f"付费证据 {pay}",
