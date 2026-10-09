@@ -1,1 +1,131 @@
 ﻿编号,日期,来源,所属线,阶段,链接,原文摘录,方向编号,付费证据,金额元,备注
+S0001,2026-10-08,GitHub,技术普及,新能力出现,https://github.com/boykopovar/AnyPS5,Tool for automatic PS5 executables porting to Linux and Windows,,无,,日期为发现日；取自 Trending 周榜（since=weekly），经 WebFetch 读取
+S0002,2026-10-08,GitHub,技术普及,新能力出现,https://github.com/mvschwarz/openrig,"Build your own network of agents from Claude Code, Codex and Pi",D001,无,,日期为发现日；取自 Trending 周榜（since=weekly），经 WebFetch 读取
+S0003,2026-10-08,GitHub,技术普及,新能力出现,https://github.com/heygen-com/hyperframes,Write HTML. Render video. Built for agents.,D007,无,,日期为发现日；取自 Trending 周榜（since=weekly），经 WebFetch 读取
+S0004,2026-10-08,GitHub,技术普及,新能力出现,https://github.com/cursor/plugins,Cursor plugin specification and official plugins,,无,,日期为发现日；取自 Trending 周榜（since=weekly），经 WebFetch 读取
+S0005,2026-10-08,GitHub,技术普及,新能力出现,https://github.com/thedotmack/claude-mem,Persistent Context Across Sessions for Every Agent,,无,,日期为发现日；取自 Trending 周榜（since=weekly），经 WebFetch 读取
+S0006,2026-10-08,GitHub,技术普及,新能力出现,https://github.com/mattpocock/skills,Skills for Real Engineers. Straight from my .agents directory.,D008,无,,日期为发现日；取自 Trending 周榜（since=weekly），经 WebFetch 读取
+S0007,2026-10-08,GitHub,技术普及,新能力出现,https://github.com/Panniantong/Agent-Reach,"Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube",,无,,日期为发现日；取自 Trending 周榜（since=weekly），经 WebFetch 读取
+S0008,2026-10-08,GitHub,技术普及,新能力出现,https://github.com/earthtojake/text-to-cad,Give your agent CAD superpowers.,,无,,日期为发现日；取自 Trending 周榜（since=weekly），经 WebFetch 读取
+S0009,2026-10-06,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49984923,Sharing AI progress in mathematics,,无,,摘录为 HN 条目标题，经官方 API 读取
+S0010,2026-10-07,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49996437,Claude Haiku 5.5,,无,,摘录为 HN 条目标题，经官方 API 读取
+S0011,2026-10-07,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49996425,GPT‑6 and Intelligent UI for everyone,,无,,摘录为 HN 条目标题，经官方 API 读取
+S0012,2026-10-07,Hacker News,经营压力,压力出现,https://news.ycombinator.com/item?id=49993914,"Visa, Mastercard, major banks facing new litigation over 'anticompetitive' fees",,无,,摘录为 HN 条目标题，经官方 API 读取
+S0013,2026-10-07,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49991227,Shipping JPEG XL in Chrome,,无,,摘录为 HN 条目标题，经官方 API 读取
+S0014,2026-10-06,Hacker News,技术普及,出现摩擦,https://news.ycombinator.com/item?id=49982498,Tell HN: GitHub refuses to remove cracked copies of my software after a month,,无,,摘录为 HN 条目标题，经官方 API 读取
+S0015,2026-10-06,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49980487,"EmbeddingGemma 2: An open, lightweight multimodal embedding model",,无,,摘录为 HN 条目标题，经官方 API 读取
+S0016,2026-10-06,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49984025,Decisions API is in public beta,,无,,摘录为 HN 条目标题，经官方 API 读取
+S0017,2026-10-06,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49985664,AnyPS5: Port PS5 binaries to PC without emulation (87% system libraries mapped),,无,,摘录为 HN 条目标题，经官方 API 读取
+S0018,2026-10-07,Hacker News,技术普及,出现摩擦,https://news.ycombinator.com/item?id=49997161,Meta and Microsoft take steps to reduce employee usage of Claude AI,D002,无,,摘录为 HN 条目标题，经官方 API 读取
+S0019,2026-10-06,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49980715,"OpenTPU – An open-source AI accelerator, developed by AI",,无,,摘录为 HN 条目标题，经官方 API 读取
+S0020,2026-10-08,Hacker News,技术普及,出现摩擦,https://news.ycombinator.com/item?id=50003107,OpenAI Withdraws 3 Math Papers,,无,,摘录为 HN 条目标题，经官方 API 读取
+S0021,2026-10-07,Hacker News,技术普及,大厂进场,https://news.ycombinator.com/item?id=49996259,Docker Agent,,无,,摘录为 HN 条目标题，经官方 API 读取
+S0022,2026-10-07,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49987076,"Strands Decider 2B: a small, open-source, decision model",,无,,摘录为 HN 条目标题，经官方 API 读取
+S0023,2026-10-08,Hacker News,政策,关窗,https://news.ycombinator.com/item?id=50006832,Trump administration is suspending Microsoft from a green card program,,无,,摘录为 HN 条目标题，经官方 API 读取；标题在本次采集期间被改过，原标题为 US Suspends Visa Program for Tech Firms Including Microsoft
+S0024,2026-10-08,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=50006760,"Show HN: Pivot – fast analytics on Iceberg, 2x+ faster than ClickHouse / DuckDB",,无,,摘录为 HN 条目标题，经官方 API 读取
+S0025,2026-10-08,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=50006114,Show HN: I Put an AI Agent on a Nokia 110,,无,,摘录为 HN 条目标题，经官方 API 读取
+S0026,2026-10-07,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49995539,Show HN: Agent.reviews – Where AI agents read and write reviews on tools,,无,,摘录为 HN 条目标题，经官方 API 读取
+S0027,2026-10-08,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=50004683,Show HN: Singularity – memory that makes coding agents cheaper on repeat work,D002,无,,摘录为 HN 条目标题，经官方 API 读取
+S0028,2026-10-08,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=50004204,Show HN: Coding Agent with Cost Saving Built-In,D002,无,,摘录为 HN 条目标题，经官方 API 读取
+S0029,2026-10-08,Hacker News,技术普及,出现摩擦,https://news.ycombinator.com/item?id=50001750,Show HN: Pacer – will your AI coding subscription last until the reset?,D002,无,,摘录为 HN 条目标题，经官方 API 读取
+S0030,2026-10-08,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=50003787,Show HN: Opposable – Computer Use for iPhone and Android,,无,,摘录为 HN 条目标题，经官方 API 读取
+S0031,2026-10-07,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49987765,Show HN: NanoMuse – An open-source AI agent for your phone and computer,,无,,摘录为 HN 条目标题，经官方 API 读取
+S0032,2026-10-07,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49995809,"Show HN: Terse, a Claude Code plugin that halves reply length by cutting filler",D002,无,,摘录为 HN 条目标题，经官方 API 读取
+S0033,2026-10-07,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49995778,Show HN: Pinrail – A desktop inbox where coding agents wait for your review,D001,无,,摘录为 HN 条目标题，经官方 API 读取
+S0034,2026-10-08,Hacker News,技术普及,开始普及,https://news.ycombinator.com/item?id=50004795,"Show HN: I indexed 166,000 AI agent setups on GitHub",D008,无,,摘录为 HN 条目标题，经官方 API 读取
+S0035,2026-10-04,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49952111,Show HN: AI search for every photo and every frame of video on macOS,,无,,摘录为 HN 条目标题，经官方 API 读取
+S0036,2026-10-08,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=50001109,"Show HN: agentc: <1mb static/no-libc, minimal, embeddable agent with Rust/C API",,无,,摘录为 HN 条目标题，经官方 API 读取
+S0037,2026-10-07,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49995687,Show HN: A virtual recording studio where you direct session players,,无,,摘录为 HN 条目标题，经官方 API 读取
+S0038,2026-10-06,Hacker News,技术普及,新能力出现,https://news.ycombinator.com/item?id=49984736,"Show HN: An AI agent runs ten web errands a day, every transcript published",,无,,摘录为 HN 条目标题，经官方 API 读取
+S0039,2026-10-05,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/openswarm-3,"A swarm of agents, in the same place you work",D001,无,,摘录为 RSS 里该条目的一句话简介；产品名：OpenSwarm
+S0040,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/strac-comply,Get SOC 2 without the sales call,,无,,摘录为 RSS 里该条目的一句话简介；产品名：Strac Comply
+S0041,2026-10-06,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/hark-3,The personal AI that handles life before you have to,,无,,摘录为 RSS 里该条目的一句话简介；产品名：Hark
+S0042,2026-10-06,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/openseo,The open source Semrush alternative,,无,,摘录为 RSS 里该条目的一句话简介；产品名：OpenSEO
+S0043,2026-10-01,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/griffin-by-tavus,World's First Human Interaction Model,,无,,摘录为 RSS 里该条目的一句话简介；产品名：Griffin by Tavus
+S0044,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/botbus,Manage your local coding agents from your phone,D001,无,,摘录为 RSS 里该条目的一句话简介；产品名：BotBus
+S0045,2026-10-06,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/offstage,"Your computer-use agent gets a Mac account, not your screen",,无,,摘录为 RSS 里该条目的一句话简介；产品名：offstage
+S0046,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/judged-systems,The judgment API platform for support systems.,,无,,摘录为 RSS 里该条目的一句话简介；产品名：judged.systems
+S0047,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/clippo-2,Orchestrate AI agent teams on a visual canvas,D001,无,,摘录为 RSS 里该条目的一句话简介；产品名：Clippo
+S0048,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/termaxa,See what an AI agent's command would destroy before it runs,D003,无,,摘录为 RSS 里该条目的一句话简介；产品名：Termaxa
+S0049,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/semwright,Give AI agents structured access to real software,,无,,摘录为 RSS 里该条目的一句话简介；产品名：Semwright
+S0050,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/clawcall,"Your AI agent's phone to dial, hold, and reports back",,无,,摘录为 RSS 里该条目的一句话简介；产品名：ClawCall
+S0051,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/polylane,An AI on-call engineer for your Vercel apps,,无,,摘录为 RSS 里该条目的一句话简介；产品名：Polylane for Vercel
+S0052,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/claude-for-google-workspace,"Bring Claude directly into Google Docs, Sheets & Slides",,无,,摘录为 RSS 里该条目的一句话简介；产品名：Claude for Google Workspace
+S0053,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/tonefold,"Describe a song, get every part as editable MIDI",,无,,摘录为 RSS 里该条目的一句话简介；产品名：Tonefold
+S0054,2026-10-05,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/udon,Control deck for your Mac home server with AI sysadmin.,,无,,摘录为 RSS 里该条目的一句话简介；产品名：Udon
+S0055,2026-10-07,Product Hunt,技术普及,出现摩擦,https://www.producthunt.com/products/off-the-record-2,Block AI from transcribing your meetings.,,无,,摘录为 RSS 里该条目的一句话简介；产品名：Off the Record
+S0056,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/markdoc-3,A shared Markdown editor for people and their agents,,无,,摘录为 RSS 里该条目的一句话简介；产品名：Markdoc
+S0057,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/nova-18,AI developer in your terminal,,无,,摘录为 RSS 里该条目的一句话简介；产品名：NOVA CLI v1.0
+S0058,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/liquid-inference,LLM router where providers compete for every prompt,D002,无,,摘录为 RSS 里该条目的一句话简介；产品名：Liquid Inference
+S0059,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/claude-haiku-5-5,Anthropic's fastest and most capable Haiku yet,,无,,摘录为 RSS 里该条目的一句话简介；产品名：Claude Haiku 5.5
+S0060,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/tractionwave,AI attention heatmaps for ads to check before you spend,,无,,摘录为 RSS 里该条目的一句话简介；产品名：Tractionwave
+S0061,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/hallmonitor,See and answer every coding agent from your notch,D001,无,,摘录为 RSS 里该条目的一句话简介；产品名：Hallmonitor
+S0062,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/sineframe-m3,Test MCP servers and the agents that call them in pytest,,无,,摘录为 RSS 里该条目的一句话简介；产品名：SineFrame M3
+S0063,2026-10-06,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/agentguard-5,Scan AI agent Skills for risks before you install them,D003,无,,摘录为 RSS 里该条目的一句话简介；产品名：AgentGuard
+S0064,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/pmtui,Autopilot for long-running AI sessions in terminal,D001,无,,摘录为 RSS 里该条目的一句话简介；产品名：pmtui
+S0065,2026-10-07,Product Hunt,技术普及,新能力出现,https://www.producthunt.com/products/leanback,Personal AI assistant for managing engineering teams,,无,,摘录为 RSS 里该条目的一句话简介；产品名：Leanback
+S0066,2026-10-06,linux.do,技术普及,新能力出现,https://linux.do/t/topic/2988062,[开源免费]AI输入法!感恩伟大的开源精神!,,无,,取自周热门 RSS（top.rss?period=weekly）
+S0067,2026-10-04,linux.do,技术普及,新能力出现,https://linux.do/t/topic/2981705,并非一轮直出，但总用时也不过四五个小时，纯许愿式编程,D004,无,,取自周热门 RSS（top.rss?period=weekly）
+S0068,2026-10-04,linux.do,技术普及,出现摩擦,https://linux.do/t/topic/2981415,春秋航空GoPay全新GoPass极简办理教程 | 支持绑定GPT网页付款+GPT开发者平台！,D005,无,,取自周热门 RSS（top.rss?period=weekly）
+S0069,2026-10-07,linux.do,技术普及,开始普及,https://linux.do/t/topic/2991967,我52岁用100亿token打造了SaaS,D004,无,,取自周热门 RSS（top.rss?period=weekly）
+S0070,2026-10-07,linux.do,技术普及,开始普及,https://linux.do/t/topic/2991641,上周在工位用 DeepSeek harness 干活,D005,无,,取自周热门 RSS（top.rss?period=weekly）
+S0071,2026-10-05,linux.do,技术普及,新能力出现,https://linux.do/t/topic/2984494,Keysmith系列更新：Keysmith-Switch，更简单易用的模型破解工具,,无,,取自周热门 RSS（top.rss?period=weekly）
+S0072,2026-10-04,linux.do,技术普及,出现摩擦,https://linux.do/t/topic/2982491,有人花钱调用他们的 API，再拿模型给出的回答去训练一个竞争模型。突然之间，这就成了要封号,,无,,取自周热门 RSS（top.rss?period=weekly）
+S0073,2026-10-08,linux.do,技术普及,开始普及,https://linux.do/t/topic/2993279,今天来说说如何正确使用agent进行vibecoding,D004,无,,取自周热门 RSS（top.rss?period=weekly）
+S0074,2026-10-05,linux.do,技术普及,新能力出现,https://linux.do/t/topic/2984649,【answer-me-with-html】一天 1k star 🔥！ 这个Skill 让 Agent 输出可视化结果！,D008,无,,取自周热门 RSS（top.rss?period=weekly）
+S0075,2026-10-06,linux.do,技术普及,新能力出现,https://linux.do/t/topic/2986886,oneshot便实现了极高的完成度,D004,无,,取自周热门 RSS（top.rss?period=weekly）
+S0076,2026-10-04,linux.do,技术普及,新能力出现,https://linux.do/t/topic/2982198,"Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",D005,无,,取自周热门 RSS（top.rss?period=weekly）
+S0077,2026-10-04,linux.do,技术普及,开始普及,https://linux.do/t/topic/2982986,Deepseek Harness （DSH）热热闹闹的，劲头也感染到我身上。,D005,无,,取自周热门 RSS（top.rss?period=weekly）
+S0078,2026-10-08,掘金,技术普及,出现摩擦,https://juejin.cn/post/7693821701955567670,Spring AI Alibaba已停更了，Java还有希望吗？,,无,,日期为发现日；摘录为综合热榜里的文章标题；文章页返回脚本验证页，未能读到发布日期
+S0079,2026-10-08,掘金,技术普及,开始普及,https://juejin.cn/post/7693805723602157578,一个全程 AI 写的小程序「厨菜记」，上线 20 天跑通流量主，收入几块钱，开心得不行,D004,无,,日期为发现日；摘录为综合热榜里的文章标题；文章页返回脚本验证页，未能读到发布日期
+S0080,2026-10-08,掘金,技术普及,新能力出现,https://juejin.cn/post/7693712140221792271,DeepSeek Harness 桌面端来啦！更便捷更安全的选择,D005,无,,日期为发现日；摘录为综合热榜里的文章标题；文章页返回脚本验证页，未能读到发布日期
+S0081,2026-10-08,掘金,技术普及,新能力出现,https://juejin.cn/post/7693225151680774154,Claude Opus 5.5 做视频：从口播稿到成片，全流程跑通,D007,无,,日期为发现日；摘录为综合热榜里的文章标题；文章页返回脚本验证页，未能读到发布日期
+S0082,2026-10-08,掘金,技术普及,出现摩擦,https://juejin.cn/post/7693049513120186414,我的 QQ 机器人被腾讯反复踢下线，折腾了半个月才搞明白,,无,,日期为发现日；摘录为综合热榜里的文章标题；文章页返回脚本验证页，未能读到发布日期
+S0083,2026-10-08,掘金,技术普及,开始普及,https://juejin.cn/post/7693225151681396746,万物皆插件：DeepSeek Harness 底层揭秘，脚手架如何蜕变为产品,D005,无,,日期为发现日；摘录为综合热榜里的文章标题；文章页返回脚本验证页，未能读到发布日期
+S0084,2026-10-08,掘金,技术普及,开始普及,https://juejin.cn/post/7694106511605317658,程序员 Codex 提问急救卡：7 个常用模板＋组合写法,,无,,日期为发现日；摘录为综合热榜里的文章标题；文章页返回脚本验证页，未能读到发布日期
+S0085,2026-10-08,掘金,技术普及,新能力出现,https://juejin.cn/post/7694074227640729634,"还是网页端, 46mb模型, 抠图功能升级了, 抠任意主体, 还是不要显卡, 不要python, 满意吗?",,无,,日期为发现日；摘录为综合热榜里的文章标题；文章页返回脚本验证页，未能读到发布日期
+S0086,2026-09-10,国内模型厂商价格和公告,技术普及,新能力出现,https://api-docs.deepseek.com/updates/,"Today, we officially release the DeepSeek-V4.1-Flash model.",,无,,DeepSeek 更新日志
+S0087,2026-09-10,国内模型厂商价格和公告,技术普及,新能力出现,https://api-docs.deepseek.com/updates/,"With the release of DeepSeek-V4.1-Flash, API prices have been reduced accordingly.",,无,,DeepSeek 更新日志；降价，具体价格见价格页，本次是首次采集，没有上次的价格可比
+S0088,2026-10-08,国内模型厂商价格和公告,技术普及,新能力出现,https://docs.volcengine.com/docs/ark/product-update-announcements?lang=zh,应用组件库新增豆包搜索 Custom 版组件,,无,,日期为发现日；页面只标到月份（202609）；火山方舟产品更新公告
+S0089,2026-10-08,国内模型厂商价格和公告,技术普及,新能力出现,https://docs.volcengine.com/docs/ark/product-update-announcements?lang=zh,Claude Code 和 Codex 支持 Web Search 功能。,D005,无,,日期为发现日；页面只标到月份（202609）；火山方舟产品更新公告，属于 Coding Plan / Agent Plan
+S0090,2026-09-08,云厂商产品公告,技术普及,大厂进场,https://www.aliyun.com/product/news/30842,万镜一刻 - 「Agent+无限画布」协同创作模式发布,,无,,阿里云产品动态列表（cn.aliyun.com/product/news/）
+S0091,2026-09-11,云厂商产品公告,技术普及,大厂进场,https://www.aliyun.com/product/news/29635,智能体安全中心 - 正式商业化,D003,无,,阿里云产品动态列表（cn.aliyun.com/product/news/）
+S0092,2026-09-18,云厂商产品公告,技术普及,大厂进场,https://www.aliyun.com/product/news/30249,智能云管理 OpenAgent - 正式商业化,,无,,阿里云产品动态列表（cn.aliyun.com/product/news/）
+S0093,2026-09-18,云厂商产品公告,技术普及,大厂进场,https://www.aliyun.com/product/news/30654,AI 建站万小智 - 正式商业化,D004,无,,阿里云产品动态列表（cn.aliyun.com/product/news/）
+S0094,2026-09-18,云厂商产品公告,技术普及,大厂进场,https://www.aliyun.com/product/news/30817,云原生数据库 PolarDB - 推出全托管 Supabase 服务,D004,无,,阿里云产品动态列表（cn.aliyun.com/product/news/）
+S0095,2026-09-18,云厂商产品公告,技术普及,新能力出现,https://www.aliyun.com/product/news/30912,大模型服务平台百炼 - Qwen3.8-Omni-Flash 正式上线,,无,,阿里云产品动态列表（cn.aliyun.com/product/news/）
+S0096,2026-09-18,云厂商产品公告,技术普及,新能力出现,https://www.aliyun.com/product/news/30917,大模型服务平台百炼 - HappyOyster-1.0-Adventure 模型上线,,无,,阿里云产品动态列表（cn.aliyun.com/product/news/）
+S0097,2026-09-18,云厂商产品公告,技术普及,新能力出现,https://www.aliyun.com/product/news/30918,大模型服务平台百炼 - GLM-5.3大模型上线,,无,,阿里云产品动态列表（cn.aliyun.com/product/news/）
+S0098,2026-09-18,云厂商产品公告,技术普及,新能力出现,https://www.aliyun.com/product/news/30919,大模型服务平台百炼 - Qwen3.8-Livetranslate-Flash-Realtime 实时音视频同传大模型上线,,无,,阿里云产品动态列表（cn.aliyun.com/product/news/）
+S0099,2026-09-18,云厂商产品公告,技术普及,新能力出现,https://www.aliyun.com/product/news/30920,大模型服务平台百炼 - Qwen-Audio-3.1-TTS-Flash 实时语音合成大模型上线,,无,,阿里云产品动态列表（cn.aliyun.com/product/news/）
+S0100,2026-09-22,云厂商产品公告,技术普及,大厂进场,https://www.aliyun.com/product/news/30546,智能体沙箱 - 正式商业化,D003,无,,阿里云产品动态列表（cn.aliyun.com/product/news/）
+S0101,2026-09-24,云厂商产品公告,技术普及,大厂进场,https://www.aliyun.com/product/news/30548,Agent 观测与优化 AgentLoop - 正式商业化,D002,无,,阿里云产品动态列表（cn.aliyun.com/product/news/）
+S0102,2026-09-24,云厂商产品公告,技术普及,出现摩擦,https://www.aliyun.com/product/news/30548,当企业同时运行多个 Agent 应用时，Token 消耗和模型调用成本可能快速增长且难以归因。,D002,无,,阿里云产品动态列表（cn.aliyun.com/product/news/）
+S0103,2026-09-28,云厂商产品公告,技术普及,新能力出现,https://www.aliyun.com/product/news/31135,人工智能平台 PAI - 发布场景化模型蒸馏能力,,无,,阿里云产品动态列表（cn.aliyun.com/product/news/）
+S0104,2026-09-29,云厂商产品公告,技术普及,出现摩擦,https://cloud.tencent.com/product/events,TDSQL-C跨可用区部署免费转收费,,无,,腾讯云产品动态
+S0105,2026-09-22,云厂商产品公告,技术普及,出现摩擦,https://cloud.tencent.com/product/events,受架构优化及内存定价上涨影响，高内存 CU 产品定价根据最新高内存机型进行定价调整,D006,无,,腾讯云产品动态，数据湖计算 DLC
+S0106,2026-09-11,云厂商产品公告,技术普及,新能力出现,https://cloud.tencent.com/product/events,"刊例价由 ¥126,000/套/年下调至¥50,000/套/年（降幅 60%）",,无,4167,腾讯云营销云AI MagicAgent 增购版降价；金额按调价后 50000 元/年 ÷ 12 ≈ 4167 元/月，是产品价格，不是某个老板的实际花费
+S0107,2026-09-15,云厂商产品公告,技术普及,新能力出现,https://cloud.baidu.com/doc/qianfan/s/Kmh4stnjp,DeepSeek-V4.1-Flash 是 DeepSeek 全新架构系列中的轻量旗舰模型,,无,,百度千帆模型更新记录，9月15日上新
+S0108,2026-09-30,国家统计局,经营压力,压力出现,https://www.stats.gov.cn/sj/zxfb/202609/t20260930_1965449.html,中、小型企业 PMI 分别为49.7%和48.9%，比上月上升0.3个和1.0个百分点，均低于临界点。,,无,,9 月 PMI
+S0109,2026-09-30,国家统计局,经营压力,压力持续,https://www.stats.gov.cn/sj/zxfb/202609/t20260930_1965449.html,投入品价格指数为52.5%，比上月上升1.4个百分点，表明非制造业企业用于经营活动的投入品价格总体水平继续上涨。,D006,无,,9 月 PMI，非制造业
+S0110,2026-09-28,国家统计局,经营压力,压力出现,https://www.stats.gov.cn/sj/zxfb/202609/t20260928_1965425.html,非金属矿采选业 1829.3 -14.4 1306.7 -14.0 190.5 -7.2,,无,,行业压力规则：1—8月利润总额累计增速 -7.2%，比1—7月的 -0.3% 低 6.9 个百分点；营业成本增速 -14.0% 高于营业收入增速 -14.4%；摘录为分行业表该行（行业、营业收入、增速、营业成本、增速、利润总额、增速）
+S0111,2026-09-28,国家统计局,经营压力,压力出现,https://www.stats.gov.cn/sj/zxfb/202609/t20260928_1965425.html,开采专业及辅助性活动 1310.1 -9.3 1217.0 -8.9 44.9 103.2,,无,,行业压力规则：1—8月利润总额累计增速 103.2%，比1—7月的 116.6% 低 13.4 个百分点；营业成本增速 -8.9% 高于营业收入增速 -9.3%；摘录为分行业表该行（行业、营业收入、增速、营业成本、增速、利润总额、增速）
+S0112,2026-09-28,国家统计局,经营压力,压力出现,https://www.stats.gov.cn/sj/zxfb/202609/t20260928_1965425.html,其他采矿业 1.6 -15.8 1.2 -14.3 0.1 -50.0,,无,,行业压力规则：1—8月利润总额累计增速 -50.0%，比1—7月的 0.0% 低 50.0 个百分点；营业成本增速 -14.3% 高于营业收入增速 -15.8%；摘录为分行业表该行（行业、营业收入、增速、营业成本、增速、利润总额、增速）
+S0113,2026-09-28,国家统计局,经营压力,压力出现,https://www.stats.gov.cn/sj/zxfb/202609/t20260928_1965425.html,农副食品加工业 33573.6 2.7 31240.3 3.0 592.0 -17.4,,无,,行业压力规则：1—8月利润总额累计增速 -17.4%，比1—7月的 -12.3% 低 5.1 个百分点；营业成本增速 3.0% 高于营业收入增速 2.7%；摘录为分行业表该行（行业、营业收入、增速、营业成本、增速、利润总额、增速）
+S0114,2026-09-28,国家统计局,经营压力,压力出现,https://www.stats.gov.cn/sj/zxfb/202609/t20260928_1965425.html,酒、饮料和精制茶制造业 9018.2 -7.7 5974.9 -6.1 1431.0 -34.7,,无,,行业压力规则：1—8月利润总额累计增速 -34.7%，比1—7月的 -16.1% 低 18.6 个百分点；营业成本增速 -6.1% 高于营业收入增速 -7.7%；摘录为分行业表该行（行业、营业收入、增速、营业成本、增速、利润总额、增速）
+S0115,2026-09-28,国家统计局,经营压力,压力出现,https://www.stats.gov.cn/sj/zxfb/202609/t20260928_1965425.html,黑色金属冶炼和压延加工业 49288.6 -1.1 46993.8 -0.4 294.3 -62.4,,无,,行业压力规则：1—8月利润总额累计增速 -62.4%，比1—7月的 -51.2% 低 11.2 个百分点；营业成本增速 -0.4% 高于营业收入增速 -1.1%；摘录为分行业表该行（行业、营业收入、增速、营业成本、增速、利润总额、增速）
+S0116,2026-09-28,国家统计局,经营压力,压力出现,https://www.stats.gov.cn/sj/zxfb/202609/t20260928_1965425.html,电力、热力生产和供应业 67008.3 0.4 60212.0 1.9 4462.5 -15.1,,无,,行业压力规则：1—8月利润总额累计增速 -15.1%，比1—7月的 -8.0% 低 7.1 个百分点；营业成本增速 1.9% 高于营业收入增速 0.4%；摘录为分行业表该行（行业、营业收入、增速、营业成本、增速、利润总额、增速）
+S0117,2026-10-08,互动易和e互动,经营压力,压力出现,https://irm.cninfo.com.cn/ircs/question/questionDetail?questionId=2359096009849253888,受存储芯片大幅涨价的影响，部分品牌客户的需求有所放缓。,D006,无,,光弘科技（300735）回复；深交所互动易最新已回复问答，日期为回复更新日期
+S0118,2026-10-08,互动易和e互动,经营压力,压力出现,https://irm.cninfo.com.cn/ircs/question/questionDetail?questionId=2364151890056273920,国外光刻胶厂商涨价，短期会增加国内晶圆厂的材料采购成本,D006,无,,南大光电（300346）回复；深交所互动易最新已回复问答，日期为回复更新日期
+S0119,2026-10-08,互动易和e互动,经营压力,压力出现,https://irm.cninfo.com.cn/ircs/question/questionDetail?questionId=2369736834736087040,公司目前经营业绩承压，主要受下游行业周期波动、原材料价格上涨、汇率波动、产能利用率不足等多重因素叠加影响。,D006,无,,铭利达（301268）回复；深交所互动易最新已回复问答，日期为回复更新日期
+S0120,2026-10-08,互动易和e互动,技术普及,有人付钱,https://irm.cninfo.com.cn/ircs/question/questionDetail?questionId=2364265019289001984,目前公司正在积极筹划和逐步部署财务、销售、研发、仓储及生产管理等业务模块的AI应用,,无,,莱茵生物（002166）回复；只说在部署，没有披露金额；深交所互动易最新已回复问答，日期为回复更新日期
+S0121,2026-10-07,互动易和e互动,技术普及,开始普及,https://sns.sseinfo.com/ajax/feeds.do?type=11&pageSize=20&lastid=-1&show=1&page=1,目前我行AI大模型已应用于营销、风控、运营、办公、研发等多类场景，并取得了一定成效。,,无,,渝农商行（601077）回复；上证e互动最新已回复问答，页面显示回复时间为“昨天”，即 2026-10-07
+S0122,2026-10-07,互动易和e互动,经营压力,压力出现,https://sns.sseinfo.com/ajax/feeds.do?type=11&pageSize=20&lastid=-1&show=1&page=2,公司今年以来基于供给端结构与成本刚性上涨的影响，对部分产品价格作出了适当的价格调整。,D006,无,,国芯科技（688262）回复；上证e互动最新已回复问答，页面显示回复时间为“昨天”，即 2026-10-07
+S0123,2026-10-07,互动易和e互动,经营压力,压力持续,https://sns.sseinfo.com/ajax/feeds.do?type=11&pageSize=20&lastid=-1&show=1&page=5,目前，光伏行业供需矛盾仍然较为突出，光伏产业链价格持续承压。,,无,,隆基绿能（601012）回复；上证e互动最新已回复问答，页面显示回复时间为“昨天”，即 2026-10-07
+S0124,2026-09-10,国务院政策文件库,政策,撑腰,https://www.gov.cn/zhengce/content/202609/content_7080627.htm,引导本行业领域大型企业及其全资或控股子公司（以下统称大型企业）将对中小企业最长付款期限限制在60日内。,,无,,国办发〔2026〕24号；政策 P001
+S0125,2026-09-10,国务院政策文件库,经营压力,压力持续,https://www.gov.cn/zhengce/content/202609/content_7080627.htm,为依法治理中小企业回款难问题，畅通经济循环,,无,,国办发〔2026〕24号；国务院专门发文治理，说明这个问题已经持续存在
+S0126,2026-09-17,国务院政策文件库,政策,加义务,https://www.gov.cn/zhengce/content/202609/content_7081356.htm,各有关地区要结合实际科学制定烟花爆竹产业政策，严控生产企业数量。,,无,,国办发〔2026〕26号；政策 P002
+S0127,2026-09-18,国务院政策文件库,政策,开窗,https://www.gov.cn/zhengce/content/202609/content_7081441.htm,打通房车（包括旅居车、旅居挂车、宿营车）消费堵点，培育房车露营等新业态,,无,,国办函〔2026〕82号；政策 P003
+S0128,2026-09-24,国务院政策文件库,政策,加义务,https://www.gov.cn/zhengce/content/202609/content_7081972.htm,《中华人民共和国审计法实施条例》已经2026年8月31日国务院第95次常务会议修订通过，现予公布，自2026年12月1日起施行。,,无,,国务院令第847号；政策 P004
+S0129,2026-09-30,国务院政策文件库,政策,撑腰,https://www.gov.cn/zhengce/content/202609/content_7082492.htm,支持有条件的地方举办或联合举办体育赛事,,无,,国办发〔2026〕28号；政策 P005
+S0130,2026-09-28,行政处罚和典型案例,政策,关窗,https://www.samr.gov.cn/xw/mtjj/art/2026/art_9e6d72a9c35143aaa8ca51c6f5406e69.html,严厉打击生产、销售无CCC认证及不符合强制性国家标准的充电宝产品等违法违规行为，查处了一批案件,,无,,市场监管总局转载新华社，公布五起充电宝质量安全典型案例
