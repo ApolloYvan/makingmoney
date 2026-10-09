@@ -17,10 +17,10 @@ score = importlib.util.module_from_spec(spec)
 sys.modules["score"] = score  # dataclass 需要能从 sys.modules 找到模块
 spec.loader.exec_module(score)
 
-DIR_COLS = ["编号", "名称", "类型", "状态", "命中不碰", "准入成本", "准入成本依据", "窗口剩余", "窗口依据",
+DIR_COLS = ["编号", "名称", "付费方", "要解决的问题", "类型", "状态", "命中不碰", "准入成本", "准入成本依据", "窗口剩余", "窗口依据",
             "每月金额元", "金额依据", "频次", "频次依据", "持续性", "持续性依据", "技术门槛", "技术门槛依据",
             "决策链", "决策链依据", "备注"]
-SIG_COLS = ["编号", "日期", "来源", "所属线", "阶段", "链接", "原文摘录", "方向编号", "付费证据", "金额元", "备注"]
+SIG_COLS = ["编号", "日期", "来源", "所属线", "阶段", "链接", "原文摘录", "价值判断", "方向编号", "付费证据", "金额元", "备注"]
 POL_COLS = ["编号", "标题", "发文机关", "链接", "阶段", "施行日期", "管哪些企业", "类型", "涉及金额",
             "新增许可要求", "更新日期", "关联方向", "备注"]
 VAL_COLS = ["日期", "方向编号", "方式", "结果", "证据", "备注"]
@@ -38,9 +38,11 @@ FAST_OK = {
 }
 
 
-def sig(i, day, source, line, stage, direction, pay="无", amount="", link=None, excerpt="原文"):
+def sig(i, day, source, line, stage, direction, pay="无", amount="", link=None, excerpt="原文",
+        value="某类人的某个需求，有人付钱"):
     return {"编号": f"S{i:04d}", "日期": day, "来源": source, "所属线": line, "阶段": stage,
             "链接": link if link is not None else f"https://example.com/{i}", "原文摘录": excerpt,
+            "价值判断": value,
             "方向编号": direction, "付费证据": pay, "金额元": amount}
 
 
@@ -208,6 +210,21 @@ class ScoreTest(unittest.TestCase):
         self.assertIn("统计区间 2026-09-18 至 2026-10-18", text)
         self.assertIn("本期新增 1 条", text)
         self.assertEqual(score.main(["--root", str(self.tmp), "--date", "2026-10-18", "--since", "2026-10-19"]), 2)
+
+    def test_signal_without_value_judgment_is_ignored(self):
+        res = self.build([LONG_OK], [sig(1, "2026-10-15", "线下访谈", "经营压力", "开始花钱", "D001", value="")])
+        self.assertEqual(len(res.signals), 0)
+        self.assertIn("缺价值判断", res.ignored[0])
+
+    def test_pending_direction_is_listed_not_scored(self):
+        row = dict(LONG_OK, 状态="待确认", 付费方="某类企业", 要解决的问题="某个问题")
+        self.build([row], [sig(1, "2026-10-15", "线下访谈", "经营压力", "开始花钱", "D001")])
+        score.main(["--root", str(self.tmp), "--date", "2026-10-18"])
+        text = (self.tmp / "周报" / "2026-W42.md").read_text(encoding="utf-8")
+        pending = text.split("## 待你确认的方向")[1].split("## 观察列表")[0]
+        self.assertIn("D001 示例长钱方向", pending)
+        self.assertIn("付费方：某类企业", pending)
+        self.assertIn("本期没有过门槛的方向", text.split("## 长钱候选")[1].split("## 快钱候选")[0])
 
     def test_check_mode_returns_nonzero_on_problems(self):
         self.build([LONG_OK], [sig(1, "2026-10-15", "线下访谈", "经营压力", "开始花钱", "D001", link="")])

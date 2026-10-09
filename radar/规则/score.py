@@ -98,6 +98,7 @@ class Signal:
     direction: str
     pay: str
     amount: float | None
+    value: str = ""
 
 
 @dataclass
@@ -296,6 +297,9 @@ def load_signals(root: Path, rules: dict, sources: set[str], direction_ids: set[
         if not r.get("链接") or not r.get("原文摘录"):
             bad("缺链接或原文摘录")
             continue
+        if not r.get("价值判断"):
+            bad("缺价值判断：没写清谁、什么需求、钱在哪")
+            continue
         if r.get("来源") not in sources:
             bad(f"来源 {r.get('来源')!r} 不在来源清单里")
             continue
@@ -326,7 +330,7 @@ def load_signals(root: Path, rules: dict, sources: set[str], direction_ids: set[
         seen_ids.add(sid)
         seen_excerpts.add(key)
         out.append(Signal(sid, d, r["来源"], line, r["阶段"], r["链接"], r["原文摘录"],
-                          direction, pay, amount))
+                          direction, pay, amount, r["价值判断"]))
     return out, ignored
 
 
@@ -522,6 +526,8 @@ def is_active(s: Scored) -> bool:
 
 def card(n: int, s: Scored) -> list[str]:
     lines = [f"### {n}. {s.id} {s.name}（{fmt_num(s.total or 0)} 分）", ""]
+    if s.row.get("付费方") or s.row.get("要解决的问题"):
+        lines += [f"付费方：{s.row.get('付费方', '')}；要解决的问题：{s.row.get('要解决的问题', '')}", ""]
     lines.append("计算：" + " × ".join(s.parts) + f" = {fmt_num(s.total or 0)}")
     lines.append("")
     lines.append(f"门槛：{s.gate_note}。")
@@ -534,6 +540,8 @@ def card(n: int, s: Scored) -> list[str]:
     for x in s.signals[:6]:
         ex = x.excerpt if len(x.excerpt) <= EXCERPT_LEN else x.excerpt[:EXCERPT_LEN] + "…"
         lines.append(f"- {x.day} · {x.source} · {x.line}/{x.stage} · [{ex}]({x.link})")
+        if x.value:
+            lines.append(f"  价值判断：{x.value}")
     if s.row.get("备注"):
         lines += ["", f"备注：{s.row['备注']}"]
     lines.append("")
@@ -575,6 +583,28 @@ def render(res: Result, rules: dict, root: Path) -> str:
         watch += ok[limit:]
         watch += [s for s in items if is_active(s) and not s.filtered and s.total is not None
                   and not s.passed]
+
+    out += ["## 待你确认的方向", ""]
+    pending_dirs = [s for s in res.long + res.fast if s.row.get("状态") == "待确认"]
+    if pending_dirs:
+        out.append("下面是 Agent 提议的方向，确认后在 数据/方向.csv 里把状态改成\"观察中\"才参与打分；"
+                   "不要的改成\"否决\"。")
+        out.append("")
+        for s in pending_dirs:
+            srcs = "、".join(sorted({x.source for x in s.signals})) or "无"
+            out.append(f"### {s.id} {s.name}（{s.kind}）")
+            out.append("")
+            out.append(f"付费方：{s.row.get('付费方', '') or '未写'}；要解决的问题："
+                       f"{s.row.get('要解决的问题', '') or '未写'}。信号 {len(s.signals)} 条，来自 {srcs}。")
+            out.append("")
+            for x in s.signals[:5]:
+                ex = x.excerpt if len(x.excerpt) <= EXCERPT_LEN else x.excerpt[:EXCERPT_LEN] + "…"
+                out.append(f"- {x.day} · {x.source} · [{ex}]({x.link})")
+                if x.value:
+                    out.append(f"  价值判断：{x.value}")
+            out.append("")
+    else:
+        out += ["暂无。", ""]
 
     out += ["## 观察列表", ""]
     watch = rank(watch)[: int(g["观察列表展示"])]
