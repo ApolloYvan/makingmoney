@@ -32,8 +32,9 @@ python3 .claude/skills/video-to-text/scripts/video2text.py "<视频链接或本�
 脚本做的事：读视频信息 → 平台有字幕就直接用字幕 → 没有就下载音频，转成 16kHz 单声道 wav，用 faster-whisper 在本机转写 → 检查识别出的字数是否像样。最后一行打印文字稿的路径。输出放在 `~/Downloads/视频文字稿/<日期_标题>/`，包括 `transcript.txt`（每行带 `[分:秒]` 时间戳）和 `meta.json`（标题、作者、时长、播放量、用的是字幕还是转写）。
 
 常用参数：
+- `--hint "词1,词2,..."`：告诉模型视频里会出现的专有名词。运行前先看一眼标题和简介，把行业术语、产品名、英文缩写列进去，同音字错误会少很多。例如跨境电商视频：`--hint "亚马逊,ASIN,竞品,Listing,A+页面,ERP,ACOS,CPC,FBA,Claude Code,Codex"`。
 - `--cookies-browser chrome`：用本机浏览器里的登录状态，能拿到需要登录才给的字幕，也能解决部分下载被拒的情况。登录信息只在本机读取，不要让用户把 cookie 文件发给你。
-- `--model medium`：识别更准，速度慢两三倍。专业名词多、`small` 识别得乱时用。
+- `--model medium`：识别更准，速度慢两三倍。专业名词多、`small` 识别得乱时用；对质量要求高时，`--hint` 和 `--model medium` 一起用。
 - `--keep-proxy`：脚本默认清掉终端里的代理设置，因为国内网站走代理常被拒绝；下载境外网站（如 YouTube）时加上这个参数。
 
 出错时怎么办：

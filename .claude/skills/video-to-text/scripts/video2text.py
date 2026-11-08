@@ -89,7 +89,7 @@ def srt_to_lines(text):
     return lines
 
 
-def transcribe(wav, model_name, lang):
+def transcribe(wav, model_name, lang, hint=None):
     import numpy as np
     from faster_whisper import WhisperModel
     # macOS 上新版 numpy 调用 Accelerate 时会报 divide by zero / overflow 之类的 RuntimeWarning，
@@ -97,7 +97,11 @@ def transcribe(wav, model_name, lang):
     warnings.filterwarnings("ignore", category=RuntimeWarning)
     print("加载语音模型 %s（第一次运行会先下载，small 约 500MB）……" % model_name, file=sys.stderr)
     model = WhisperModel(model_name, compute_type="int8")
-    prompt = "以下是普通话的句子，使用简体中文。" if lang == "zh" else None
+    prompt = "以下是普通话的句子，使用简体中文。" if lang == "zh" else ""
+    if hint:
+        # 把视频里会出现的专有名词告诉模型，同音字错误会少很多，比如 竞品、ASIN、ERP。
+        prompt += "可能出现的词：" + hint + "。"
+    prompt = prompt or None
     # 自己读 16kHz 单声道 wav 交给模型，不走 faster-whisper 自带的 PyAV 解码：新版 PyAV 和它不兼容。
     import wave
     with wave.open(str(wav), "rb") as w:
@@ -123,6 +127,7 @@ def main():
     ap.add_argument("--lang", default="zh", help="语言，默认 zh")
     ap.add_argument("--keep-proxy", action="store_true", help="保留终端里的代理设置（默认清掉，国内网站走代理常被拒绝）")
     ap.add_argument("--no-subs", action="store_true", help="不用字幕，直接转写音频")
+    ap.add_argument("--hint", help="视频里可能出现的专有名词，用逗号隔开，如 \"亚马逊,ASIN,竞品,Listing\"")
     a = ap.parse_args()
 
     local = Path(a.source).expanduser()
@@ -170,7 +175,7 @@ def main():
         code, _, err = run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(media), "-ar", "16000", "-ac", "1", str(wav)], env)
         if code != 0:
             fail("ffmpeg 转换失败：" + err.strip()[-300:])
-        lines = transcribe(wav, a.model, a.lang)
+        lines = transcribe(wav, a.model, a.lang, a.hint)
         method = "语音转写：faster-whisper %s" % a.model
         wav.unlink()
 
